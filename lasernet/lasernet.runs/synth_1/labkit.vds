@@ -1,0 +1,1082 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sat Jan 07 15:07:48 2017
+# Process ID: 8656
+# Current directory: C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1
+# Command line: vivado.exe -log labkit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source labkit.tcl
+# Log file: C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/labkit.vds
+# Journal file: C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source labkit.tcl -notrace
+Command: synth_design -top labkit -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14796 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 278.426 ; gain = 68.387
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'labkit' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:22]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-8656-allanko/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-8656-allanko/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'display_8hex' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/display_8hex.v:16]
+	Parameter bits bound to: 13 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'display_8hex' (2#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/display_8hex.v:16]
+INFO: [Synth 8-638] synthesizing module 'synchronize' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/synchronize.v:3]
+	Parameter NSYNC bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'synchronize' (3#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/synchronize.v:3]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/debounce.v:7]
+	Parameter DELAY bound to: 270000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debounce' (4#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/debounce.v:7]
+INFO: [Synth 8-638] synthesizing module 'mainfsm' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:24]
+	Parameter S_PASSIVE_OPEN bound to: 4'b0000 
+	Parameter S_ACTIVE_OPEN bound to: 4'b0001 
+	Parameter S_CONNECTED bound to: 4'b0010 
+	Parameter S_ACTIVATED bound to: 4'b0011 
+	Parameter S_TRANSMITTING bound to: 4'b0100 
+	Parameter S_TRANSMIT_WAIT bound to: 4'b0101 
+	Parameter S_FIN bound to: 4'b0110 
+	Parameter S_FIN_WAIT bound to: 4'b0111 
+INFO: [Synth 8-256] done synthesizing module 'mainfsm' (5#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:24]
+INFO: [Synth 8-638] synthesizing module 'xvga' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/xvga.v:24]
+INFO: [Synth 8-256] done synthesizing module 'xvga' (6#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/xvga.v:24]
+INFO: [Synth 8-638] synthesizing module 'interface' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/interface.v:23]
+INFO: [Synth 8-638] synthesizing module 'char_string_display' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 6 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/font_rom.v:40]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (7#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/font_rom.v:40]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized0' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 15 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized0' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized1' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 15 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized1' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized2' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 15 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized2' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized3' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 15 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized3' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized4' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 15 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized4' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized5' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 15 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized5' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized6' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 15 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized6' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized7' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 15 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized7' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized8' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 15 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized8' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized9' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 15 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized9' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized10' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 11 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized10' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'interface' (9#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/interface.v:23]
+INFO: [Synth 8-638] synthesizing module 'blob' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/blob.v:1]
+	Parameter WIDTH bound to: 800 - type: integer 
+	Parameter HEIGHT bound to: 128 - type: integer 
+	Parameter COLOR bound to: 24'b111111110000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'blob' (10#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/blob.v:1]
+INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized11' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+	Parameter NCHAR bound to: 16 - type: integer 
+	Parameter NCHAR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized11' (10#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-638] synthesizing module 'ps2_ascii_input' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/ps2_kbd.v:44]
+INFO: [Synth 8-638] synthesizing module 'ps2' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/ps2_kbd.v:157]
+INFO: [Synth 8-256] done synthesizing module 'ps2' (11#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/ps2_kbd.v:157]
+INFO: [Synth 8-256] done synthesizing module 'ps2_ascii_input' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/ps2_kbd.v:44]
+WARNING: [Synth 8-3848] Net UART_RXD_OUT in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:27]
+WARNING: [Synth 8-3848] Net JA in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:33]
+WARNING: [Synth 8-3848] Net LED16_B in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:34]
+WARNING: [Synth 8-3848] Net LED16_G in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:34]
+WARNING: [Synth 8-3848] Net LED16_R in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:34]
+WARNING: [Synth 8-3848] Net LED17_B in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:35]
+WARNING: [Synth 8-3848] Net LED17_G in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:35]
+WARNING: [Synth 8-3848] Net LED17_R in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:35]
+WARNING: [Synth 8-3848] Net dis in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:155]
+WARNING: [Synth 8-3848] Net incomingready in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:101]
+INFO: [Synth 8-256] done synthesizing module 'labkit' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:22]
+WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3331] design interface has unconnected port display
+WARNING: [Synth 8-3331] design mainfsm has unconnected port readyin
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[8]
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[7]
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[6]
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[5]
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[3]
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port UART_RXD_OUT
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[1]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[0]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_B
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_G
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_R
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_B
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_G
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_R
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[15]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[14]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[13]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[12]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[11]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[10]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[9]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[8]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[12]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port BTNU
+WARNING: [Synth 8-3331] design labkit has unconnected port BTNL
+WARNING: [Synth 8-3331] design labkit has unconnected port BTNR
+WARNING: [Synth 8-3331] design labkit has unconnected port BTND
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 317.426 ; gain = 107.387
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 317.426 ; gain = 107.387
+---------------------------------------------------------------------------------
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clock65' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:63]
+WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'font_rom' instantiated as 'face/cd_a1/f'. 14 instances of this cell are unresolved black boxes. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:76]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-8656-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
+Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-8656-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
+Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]
+Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/labkit_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/labkit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 641.648 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 641.648 ; gain = 431.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 641.648 ; gain = 431.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-8656-allanko/dcp/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-8656-allanko/dcp/clk_wiz_0_in_context.xdc}, line 4).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 641.648 ; gain = 431.609
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clean" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mainfsm'
+INFO: [Synth 8-5544] ROM "statedisplay" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "shift" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+          S_PASSIVE_OPEN |                              000 |                             0000
+           S_ACTIVE_OPEN |                              001 |                             0001
+             S_CONNECTED |                              011 |                             0010
+             S_ACTIVATED |                              010 |                             0011
+          S_TRANSMITTING |                              100 |                             0100
+         S_TRANSMIT_WAIT |                              101 |                             0101
+                   S_FIN |                              110 |                             0110
+              S_FIN_WAIT |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mainfsm'
+WARNING: [Synth 8-327] inferring latch for variable 'ACKout_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:110]
+WARNING: [Synth 8-327] inferring latch for variable 'SEQout_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:111]
+WARNING: [Synth 8-327] inferring latch for variable 'flagsoutFIN_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'flagsoutSYN_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'flagsoutACK_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'statedisplay_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:105]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 641.648 ; gain = 431.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 9     
+	   3 Input     32 Bit       Adders := 1     
+	   3 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 14    
+	   3 Input     12 Bit       Adders := 15    
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 14    
+	   3 Input      5 Bit       Adders := 14    
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---XORs : 
+	                9 Bit    Wide XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 18    
++---RAMs : 
+	               64 Bit         RAMs := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   8 Input     32 Bit        Muxes := 4     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 16    
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 15    
+	   2 Input      3 Bit        Muxes := 20    
+	   3 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	  18 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 22    
+	   8 Input      1 Bit        Muxes := 7     
+	  16 Input      1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module labkit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+	   2 Input      3 Bit        Muxes := 2     
+Module display_8hex 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+Module synchronize 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
+Module mainfsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 9     
+	   3 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   8 Input     32 Bit        Muxes := 4     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   3 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	  18 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 10    
+Module xvga 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module char_string_display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 8     
+Module char_string_display__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module char_string_display__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module char_string_display__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module char_string_display__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module char_string_display__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module char_string_display__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module char_string_display__parameterized6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module char_string_display__parameterized7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module char_string_display__parameterized8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module char_string_display__parameterized9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module char_string_display__parameterized10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module blob 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     13 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+Module char_string_display__parameterized11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module ps2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---XORs : 
+	                9 Bit    Wide XORs := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	               64 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module ps2_ascii_input 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---ROMs : 
+	                              ROMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "db1/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "db1/clean" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3331] design interface has unconnected port display
+WARNING: [Synth 8-3331] design mainfsm has unconnected port readyin
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[8]
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[7]
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[6]
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[5]
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[3]
+WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port UART_RXD_OUT
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[1]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[0]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_B
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_G
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_R
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_B
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_G
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_R
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[15]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[14]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[13]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[12]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[11]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[10]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[9]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[8]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[12]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port BTNU
+WARNING: [Synth 8-3331] design labkit has unconnected port BTNL
+WARNING: [Synth 8-3331] design labkit has unconnected port BTNR
+WARNING: [Synth 8-3331] design labkit has unconnected port BTND
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[4]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[5]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[6]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[7]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[8]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[9]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[10]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[11]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[12]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[13]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[14]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[15]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[16]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[17]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[18]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[19]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[20]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[21]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[22]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[23]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[24]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[25]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[26]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[27]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[28]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[29]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[30]' (FDE) to 'statemachine/lastACK_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\statemachine/lastACK_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kbd/ascii_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\statemachine/statedisplay_reg[3] )
+INFO: [Synth 8-3886] merging instance 'rgb_reg[1]' (FD) to 'rgb_reg[0]'
+INFO: [Synth 8-3886] merging instance 'rgb_reg[0]' (FD) to 'rgb_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\last_ascii_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[71] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[87] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[103] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[111] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[119] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cstring_reg[127] )
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[31]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[30]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[29]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[28]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[27]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[26]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[25]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[24]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[23]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[22]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[21]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[20]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[19]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[18]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[17]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[16]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[15]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[14]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[13]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[12]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[11]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[10]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/ACKout_reg[0]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[31]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[30]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[29]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[28]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[27]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[26]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[25]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[24]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[23]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[22]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[21]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[20]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[19]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[18]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[17]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[16]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[15]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[14]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[13]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[12]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[11]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[10]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/SEQout_reg[0]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/flagsoutFIN_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/flagsoutSYN_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/flagsoutACK_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/statedisplay_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/statedisplay_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/statedisplay_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/statedisplay_reg[0]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/lastACK_reg[31]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[31]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[30]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[29]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[28]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[27]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[26]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[25]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[24]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[23]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[22]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[21]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[20]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[19]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[18]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[17]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[16]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[15]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[14]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[13]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[12]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[11]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[10]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (statemachine/nextACK_reg[4]) is unused and will be removed from module labkit.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 641.648 ; gain = 431.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------+----------------+---------------+----------------+
+|Module Name     | RTL Object     | Depth x Width | Implemented As | 
++----------------+----------------+---------------+----------------+
+|ps2_ascii_input | curkey_reg_rep | 256x7         | Block RAM      | 
+|ps2_ascii_input | curkey_reg_rep | 256x7         | Block RAM      | 
++----------------+----------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+--------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object         | Inference | Size (Depth x Width) | Primitives   | 
++------------+--------------------+-----------+----------------------+--------------+
+|labkit      | kbd/myps2/fifo_reg | Implied   | 8 x 8                | RAM32M x 2   | 
++------------+--------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock65/clk_out_65mhz' to pin 'clock65/bbstub_clk_out_65mhz/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 641.648 ; gain = 431.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:59 . Memory (MB): peak = 657.656 ; gain = 447.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 657.703 ; gain = 447.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:01 . Memory (MB): peak = 657.703 ; gain = 447.664
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:01 . Memory (MB): peak = 657.703 ; gain = 447.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 657.703 ; gain = 447.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 657.703 ; gain = 447.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 657.703 ; gain = 447.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 657.703 ; gain = 447.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |font_rom      |        14|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |clk_wiz_0    |     1|
+|2     |font_rom     |     1|
+|3     |font_rom__1  |     1|
+|4     |font_rom__10 |     1|
+|5     |font_rom__11 |     1|
+|6     |font_rom__12 |     1|
+|7     |font_rom__13 |     1|
+|8     |font_rom__2  |     1|
+|9     |font_rom__3  |     1|
+|10    |font_rom__4  |     1|
+|11    |font_rom__5  |     1|
+|12    |font_rom__6  |     1|
+|13    |font_rom__7  |     1|
+|14    |font_rom__8  |     1|
+|15    |font_rom__9  |     1|
+|16    |CARRY4       |   132|
+|17    |LUT1         |   221|
+|18    |LUT2         |    84|
+|19    |LUT3         |    89|
+|20    |LUT4         |    67|
+|21    |LUT5         |    99|
+|22    |LUT6         |   319|
+|23    |MUXF7        |     6|
+|24    |RAM32M       |     2|
+|25    |RAMB18E1     |     1|
+|26    |FDRE         |   269|
+|27    |FDSE         |     8|
+|28    |IBUF         |    17|
+|29    |OBUF         |    33|
+|30    |OBUFT        |    28|
++------+-------------+------+
+
+Report Instance Areas: 
++------+---------------+-------------------------------------+------+
+|      |Instance       |Module                               |Cells |
++------+---------------+-------------------------------------+------+
+|1     |top            |                                     |  1489|
+|2     |  cd           |char_string_display__parameterized11 |    34|
+|3     |  db1          |debounce                             |    51|
+|4     |  display      |display_8hex                         |    77|
+|5     |  face         |interface                            |   297|
+|6     |    cd_a1      |char_string_display                  |    30|
+|7     |    cd_a10     |char_string_display__parameterized7  |    14|
+|8     |    cd_a11     |char_string_display__parameterized8  |    25|
+|9     |    cd_a12     |char_string_display__parameterized9  |    38|
+|10    |    cd_a2      |char_string_display_1                |    23|
+|11    |    cd_a3      |char_string_display__parameterized0  |    22|
+|12    |    cd_a4      |char_string_display__parameterized1  |    17|
+|13    |    cd_a5      |char_string_display__parameterized2  |    17|
+|14    |    cd_a6      |char_string_display__parameterized3  |    23|
+|15    |    cd_a7      |char_string_display__parameterized4  |    17|
+|16    |    cd_a8      |char_string_display__parameterized5  |    23|
+|17    |    cd_a9      |char_string_display__parameterized6  |    23|
+|18    |    cd_b1      |char_string_display__parameterized10 |    25|
+|19    |  kbd          |ps2_ascii_input                      |    50|
+|20    |    myps2      |ps2                                  |    44|
+|21    |  paddle1      |blob                                 |    11|
+|22    |  s1           |synchronize                          |     3|
+|23    |  s2           |synchronize_0                        |     2|
+|24    |  statemachine |mainfsm                              |   221|
+|25    |  xvga1        |xvga                                 |   515|
++------+---------------+-------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 657.703 ; gain = 447.664
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 186 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 657.703 ; gain = 123.441
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 657.703 ; gain = 447.664
+INFO: [Project 1-571] Translating synthesized netlist
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+Parsing EDIF File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/font_rom.edn]
+Finished Parsing EDIF File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/font_rom.edn]
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+INFO: [Netlist 29-17] Analyzing 166 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Xilinx CORE Generator Xilinx CORE Generator 7.1.03i
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
+  RAMB16_S9 => RAMB18E1: 14 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+173 Infos, 231 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:59 . Memory (MB): peak = 663.164 ; gain = 453.125
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/labkit.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 663.164 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 07 15:08:53 2017...

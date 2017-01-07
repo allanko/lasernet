@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1483819751">
+  <File Type="PWROPT-DRC" Name="labkit_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="labkit_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="labkit_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="labkit_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="labkit.tcl"/>
+  <File Type="OPT-HWDEF" Name="labkit.hwdef"/>
+  <File Type="RDI-RDI" Name="labkit.vdi"/>
+  <File Type="OPT-DCP" Name="labkit_opt.dcp"/>
+  <File Type="OPT-DRC" Name="labkit_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="labkit_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="labkit_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="labkit_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="labkit_placed.dcp"/>
+  <File Type="PLACE-IO" Name="labkit_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="labkit_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="labkit_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="labkit_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="labkit_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="labkit_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="labkit_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="labkit_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="labkit_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="labkit_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="labkit_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="labkit_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="labkit_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="labkit_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="labkit_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="labkit_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="labkit_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="labkit_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="labkit.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="labkit_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="labkit.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="labkit_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="labkit.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="labkit_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="labkit.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="labkit_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="labkit_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="labkit_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="labkit_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="labkit_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="labkit_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="labkit_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="labkit_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="labkit_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="labkit_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="labkit_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="labkit_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="labkit_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="labkit_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="labkit_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="labkit.bit"/>
+  <File Type="BITSTR-RBT" Name="labkit.rbt"/>
+  <File Type="BITSTR-NKY" Name="labkit.nky"/>
+  <File Type="BITSTR-BMM" Name="labkit_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="labkit.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="labkit.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../cstring/font_rom.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../cstring/font_rom.edn">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../cstring/cstringdisp.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../synchronize.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../mainfsm.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../display_8hex.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../debounce.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../xvga.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../blob.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../interface.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ps2_kbd.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../nexys-wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../messageinput.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../makepacket.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../checkpacket.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../cstring/font_rom.mif">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="labkit"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../Nexys4DDR_Master_lab4.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>
