@@ -14,13 +14,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14784 
+INFO: Helper process launched with PID 15376 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 277.438 ; gain = 67.539
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 278.340 ; gain = 68.270
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'labkit' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:22]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-14144-allanko/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-14144-allanko/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-638] synthesizing module 'display_8hex' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/display_8hex.v:16]
 	Parameter bits bound to: 13 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'display_8hex' (2#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/display_8hex.v:16]
@@ -40,12 +40,16 @@ INFO: [Synth 8-638] synthesizing module 'mainfsm' [C:/Users/Allan/Documents/MIT/
 	Parameter S_FIN bound to: 4'b0110 
 	Parameter S_FIN_WAIT bound to: 4'b0111 
 INFO: [Synth 8-256] done synthesizing module 'mainfsm' (5#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:24]
-INFO: [Synth 8-638] synthesizing module 'keyboardexport' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:8]
-INFO: [Synth 8-638] synthesizing module 'ps2_ascii_input' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:57]
-INFO: [Synth 8-638] synthesizing module 'ps2' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:185]
-INFO: [Synth 8-256] done synthesizing module 'ps2' (6#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:185]
-INFO: [Synth 8-256] done synthesizing module 'ps2_ascii_input' (7#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:57]
-INFO: [Synth 8-256] done synthesizing module 'keyboardexport' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:8]
+INFO: [Synth 8-638] synthesizing module 'keyboardexport' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:9]
+	Parameter MAXINDEX bound to: 3'b100 
+	Parameter S_WAIT bound to: 2'b00 
+	Parameter S_SAVE bound to: 2'b01 
+	Parameter S_RESET bound to: 2'b10 
+INFO: [Synth 8-638] synthesizing module 'ps2_ascii_input' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:163]
+INFO: [Synth 8-638] synthesizing module 'ps2' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:291]
+INFO: [Synth 8-256] done synthesizing module 'ps2' (6#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:291]
+INFO: [Synth 8-256] done synthesizing module 'ps2_ascii_input' (7#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:163]
+INFO: [Synth 8-256] done synthesizing module 'keyboardexport' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:9]
 INFO: [Synth 8-638] synthesizing module 'xvga' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/xvga.v:24]
 INFO: [Synth 8-256] done synthesizing module 'xvga' (9#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/xvga.v:24]
 INFO: [Synth 8-638] synthesizing module 'screenlayout' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/screenlayout.v:25]
@@ -117,8 +121,8 @@ WARNING: [Synth 8-3848] Net LED16_R in module/entity labkit does not have driver
 WARNING: [Synth 8-3848] Net LED17_B in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:35]
 WARNING: [Synth 8-3848] Net LED17_G in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:35]
 WARNING: [Synth 8-3848] Net LED17_R in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:35]
-WARNING: [Synth 8-3848] Net dis in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:191]
-WARNING: [Synth 8-3848] Net incomingready in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:101]
+WARNING: [Synth 8-3848] Net dis in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:189]
+WARNING: [Synth 8-3848] Net incomingready in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:106]
 INFO: [Synth 8-256] done synthesizing module 'labkit' (14#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:22]
 WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
 WARNING: [Synth 8-3331] design screenlayout has unconnected port display
@@ -160,11 +164,10 @@ WARNING: [Synth 8-3331] design labkit has unconnected port LED[3]
 WARNING: [Synth 8-3331] design labkit has unconnected port SW[12]
 WARNING: [Synth 8-3331] design labkit has unconnected port SW[3]
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNU
-WARNING: [Synth 8-3331] design labkit has unconnected port BTNL
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNR
 WARNING: [Synth 8-3331] design labkit has unconnected port BTND
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 317.398 ; gain = 107.500
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 318.316 ; gain = 108.246
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -174,7 +177,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 317.398 ; gain = 107.500
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 318.316 ; gain = 108.246
 ---------------------------------------------------------------------------------
 WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
@@ -209,8 +212,8 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
-Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
+Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-14144-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
+Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-14144-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
 Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]
 Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/labkit_propImpl.xdc].
@@ -220,24 +223,24 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 641.336 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 643.441 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 641.336 ; gain = 431.438
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 643.441 ; gain = 433.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 641.336 ; gain = 431.438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 643.441 ; gain = 433.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/dcp/clk_wiz_0_in_context.xdc}, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/dcp/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-14144-allanko/dcp/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-14144-allanko/dcp/clk_wiz_0_in_context.xdc}, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 641.336 ; gain = 431.438
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 643.441 ; gain = 433.371
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clean" won't be mapped to RAM because it is too sparse
@@ -267,6 +270,7 @@ INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address
 INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "messageoutarray0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -287,7 +291,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'flagsoutSYN_reg' [C:/Users/
 WARNING: [Synth 8-327] inferring latch for variable 'flagsoutACK_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:61]
 WARNING: [Synth 8-327] inferring latch for variable 'statedisplay_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:105]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 641.336 ; gain = 431.438
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 643.441 ; gain = 433.371
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -311,39 +315,44 @@ Detailed RTL Component Info :
 	   3 Input      8 Bit       Adders := 4     
 	   3 Input      5 Bit       Adders := 14    
 	   2 Input      4 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 3     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 14    
 +---XORs : 
 	                9 Bit    Wide XORs := 1     
 +---Registers : 
-	              128 Bit    Registers := 1     
+	              128 Bit    Registers := 6     
 	               32 Bit    Registers := 3     
 	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 6     
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
-	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 18    
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 20    
 +---RAMs : 
 	               64 Bit         RAMs := 1     
 +---ROMs : 
 	                              ROMs := 1     
 +---Muxes : 
+	   4 Input    128 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 5     
 	   8 Input     32 Bit        Muxes := 4     
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 16    
 	   8 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 15    
-	   2 Input      3 Bit        Muxes := 19    
+	   2 Input      3 Bit        Muxes := 20    
 	   3 Input      3 Bit        Muxes := 1     
 	   8 Input      3 Bit        Muxes := 1     
 	  18 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 22    
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 36    
 	   8 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 8     
 	  16 Input      1 Bit        Muxes := 16    
 	  32 Input      1 Bit        Muxes := 80    
 ---------------------------------------------------------------------------------
@@ -424,12 +433,22 @@ Module keyboardexport
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	              128 Bit    Registers := 1     
+	              128 Bit    Registers := 6     
 	                8 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
 +---Muxes : 
+	   4 Input    128 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 16    
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 8     
 Module xvga 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -646,6 +665,8 @@ INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address
 INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "db1/count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "db1/clean" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "db2/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "db2/clean" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
 WARNING: [Synth 8-3331] design screenlayout has unconnected port display
 WARNING: [Synth 8-3331] design mainfsm has unconnected port readyin
@@ -686,7 +707,6 @@ WARNING: [Synth 8-3331] design labkit has unconnected port LED[3]
 WARNING: [Synth 8-3331] design labkit has unconnected port SW[12]
 WARNING: [Synth 8-3331] design labkit has unconnected port SW[3]
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNU
-WARNING: [Synth 8-3331] design labkit has unconnected port BTNL
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNR
 WARNING: [Synth 8-3331] design labkit has unconnected port BTND
 INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[4]' (FDE) to 'statemachine/lastACK_reg[31]'
@@ -721,23 +741,83 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (statemachine/\statedisplay_reg[3] )
 INFO: [Synth 8-3886] merging instance 'rgb_reg[1]' (FD) to 'rgb_reg[0]'
 INFO: [Synth 8-3886] merging instance 'rgb_reg[0]' (FD) to 'rgb_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\last_ascii_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[39] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[47] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[55] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[63] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[71] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[87] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[95] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[103] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[111] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[119] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\cstring_reg[127] )
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[7]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[71]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[39]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[103]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[23]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[87]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[55]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[119]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[15]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[79]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[47]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[111]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[31]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[95]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[63]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray1_reg[127] )
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[7]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[71]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[39]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[103]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[23]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[87]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[55]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[119]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[15]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[79]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[47]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[111]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[31]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[95]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[63]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray0_reg[127] )
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[7]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[71]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[39]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[103]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[23]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[87]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[55]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[119]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[15]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[79]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[47]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[111]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[31]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[95]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[63]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray2_reg[127] )
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[7]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[71]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[39]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[103]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[23]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[87]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[55]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[119]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[15]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[79]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[47]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[111]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[31]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[95]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[63]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray4_reg[127] )
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[7]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[71]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[39]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[103]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[23]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[87]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[55]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[119]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[15]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[79]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[47]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray3_reg[127] )
 WARNING: [Synth 8-3332] Sequential element (ACKout_reg[31]) is unused and will be removed from module mainfsm.
 WARNING: [Synth 8-3332] Sequential element (ACKout_reg[30]) is unused and will be removed from module mainfsm.
 WARNING: [Synth 8-3332] Sequential element (ACKout_reg[29]) is unused and will be removed from module mainfsm.
@@ -840,7 +920,7 @@ WARNING: [Synth 8-3332] Sequential element (nextACK_reg[5]) is unused and will b
 WARNING: [Synth 8-3332] Sequential element (nextACK_reg[4]) is unused and will be removed from module mainfsm.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 641.336 ; gain = 431.438
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 643.441 ; gain = 433.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -881,10 +961,10 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clock65/clk_out_65mhz' to pin 'clock65/bbstub_clk_out_65mhz/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 641.336 ; gain = 431.438
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 643.441 ; gain = 433.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 648.926 ; gain = 439.027
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 681.500 ; gain = 471.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -896,7 +976,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 648.926 ; gain = 439.027
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 681.500 ; gain = 471.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -920,7 +1000,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 681.500 ; gain = 471.430
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -933,7 +1013,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 681.500 ; gain = 471.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -945,25 +1025,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 681.500 ; gain = 471.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 681.500 ; gain = 471.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 681.500 ; gain = 471.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 681.500 ; gain = 471.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -996,21 +1076,21 @@ Report Cell Usage:
 |13    |font_rom__7  |     1|
 |14    |font_rom__8  |     1|
 |15    |font_rom__9  |     1|
-|16    |CARRY4       |   244|
-|17    |LUT1         |   416|
-|18    |LUT2         |   373|
-|19    |LUT3         |    82|
-|20    |LUT4         |   247|
-|21    |LUT5         |    67|
-|22    |LUT6         |   141|
-|23    |MUXF7        |    25|
+|16    |CARRY4       |   249|
+|17    |LUT1         |   445|
+|18    |LUT2         |   401|
+|19    |LUT3         |    86|
+|20    |LUT4         |   180|
+|21    |LUT5         |    77|
+|22    |LUT6         |   345|
+|23    |MUXF7        |    26|
 |24    |MUXF8        |     9|
 |25    |RAM32M       |     2|
 |26    |RAMB18E1     |     1|
 |27    |XORCY        |     9|
-|28    |FDRE         |   262|
-|29    |FDSE         |    12|
-|30    |IBUF         |    17|
+|28    |FDRE         |   668|
+|29    |FDSE         |   194|
+|30    |IBUF         |    18|
 |31    |OBUF         |    33|
 |32    |OBUFT        |    28|
 +------+-------------+------+
@@ -1019,38 +1099,39 @@ Report Instance Areas:
 +------+----------------+-------------------------------------+------+
 |      |Instance        |Module                               |Cells |
 +------+----------------+-------------------------------------+------+
-|1     |top             |                                     |  2082|
+|1     |top             |                                     |  2885|
 |2     |  db1           |debounce                             |    55|
-|3     |  display       |display_8hex                         |    78|
-|4     |  face          |screenlayout                         |   561|
-|5     |    cd          |char_string_display__parameterized11 |    29|
-|6     |    cd_in1      |char_string_display__parameterized6  |    47|
-|7     |    cd_in2      |char_string_display__parameterized7  |    47|
-|8     |    cd_in3      |char_string_display__parameterized8  |    47|
-|9     |    cd_in4      |char_string_display__parameterized9  |    47|
-|10    |    cd_in5      |char_string_display__parameterized10 |    43|
-|11    |    cd_incoming |char_string_display                  |    10|
-|12    |    cd_input    |char_string_display__parameterized0  |    45|
-|13    |    cd_out1     |char_string_display__parameterized1  |    47|
-|14    |    cd_out2     |char_string_display__parameterized2  |    47|
-|15    |    cd_out3     |char_string_display__parameterized3  |    47|
-|16    |    cd_out4     |char_string_display__parameterized4  |    47|
-|17    |    cd_out5     |char_string_display__parameterized5  |    47|
-|18    |    cd_outgoing |char_string_display_1                |    11|
-|19    |  kbdexport1    |keyboardexport                       |   242|
-|20    |    kbd         |ps2_ascii_input                      |    52|
-|21    |      myps2     |ps2                                  |    46|
-|22    |  s1            |synchronize                          |     3|
-|23    |  s2            |synchronize_0                        |     2|
-|24    |  statemachine  |mainfsm                              |   209|
-|25    |  xvga1         |xvga                                 |   833|
+|3     |  db2           |debounce_0                           |    54|
+|4     |  display       |display_8hex                         |    78|
+|5     |  face          |screenlayout                         |   484|
+|6     |    cd          |char_string_display__parameterized11 |    29|
+|7     |    cd_in1      |char_string_display__parameterized6  |    47|
+|8     |    cd_in2      |char_string_display__parameterized7  |    47|
+|9     |    cd_in3      |char_string_display__parameterized8  |    47|
+|10    |    cd_in4      |char_string_display__parameterized9  |    47|
+|11    |    cd_in5      |char_string_display__parameterized10 |    43|
+|12    |    cd_incoming |char_string_display                  |    11|
+|13    |    cd_input    |char_string_display__parameterized0  |    46|
+|14    |    cd_out1     |char_string_display__parameterized1  |    31|
+|15    |    cd_out2     |char_string_display__parameterized2  |    31|
+|16    |    cd_out3     |char_string_display__parameterized3  |    31|
+|17    |    cd_out4     |char_string_display__parameterized4  |    31|
+|18    |    cd_out5     |char_string_display__parameterized5  |    32|
+|19    |    cd_outgoing |char_string_display_2                |    11|
+|20    |  kbdexport1    |keyboardexport                       |  1069|
+|21    |    kbd         |ps2_ascii_input                      |    52|
+|22    |      myps2     |ps2                                  |    46|
+|23    |  s1            |synchronize                          |     4|
+|24    |  s2            |synchronize_1                        |     2|
+|25    |  statemachine  |mainfsm                              |   209|
+|26    |  xvga1         |xvga                                 |   830|
 +------+----------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 681.500 ; gain = 471.430
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 186 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 648.926 ; gain = 115.090
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
+Synthesis finished with 0 errors, 0 critical warnings and 190 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 681.500 ; gain = 146.305
+Synthesis Optimization Complete : Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 681.500 ; gain = 471.430
 INFO: [Project 1-571] Translating synthesized netlist
 WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
@@ -1082,7 +1163,7 @@ WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
 WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
-INFO: [Netlist 29-17] Analyzing 287 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 293 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Xilinx CORE Generator Xilinx CORE Generator 7.1.03i
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1094,9 +1175,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAMB16_S9 => RAMB18E1: 14 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-175 Infos, 231 Warnings, 0 Critical Warnings and 0 Errors encountered.
+238 Infos, 229 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 654.730 ; gain = 444.832
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 681.500 ; gain = 471.430
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/labkit.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 654.730 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Jan 07 19:38:11 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 681.500 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 07 21:40:06 2017...

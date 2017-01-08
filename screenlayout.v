@@ -90,7 +90,7 @@ module screenlayout(
         wire [2:0]  cdpixel_out1;
         char_string_display cd_out1(clock_65mhz,hcount,vcount,
                                     cdpixel_out1, cstring_out1,
-                                    11'd550, 10'd25+1*50);
+                                    11'd150, 10'd25+1*50);
         defparam cd_out1.NCHAR = 16;
         defparam cd_out1.NCHAR_BITS = 5; 
 
@@ -99,7 +99,7 @@ module screenlayout(
         wire [2:0]  cdpixel_out2;
         char_string_display cd_out2(clock_65mhz,hcount,vcount,
                                     cdpixel_out2, cstring_out2,
-                                    11'd550, 10'd25+2*50);
+                                    11'd150, 10'd25+2*50);
         defparam cd_out2.NCHAR = 16;
         defparam cd_out2.NCHAR_BITS = 5;
 
@@ -108,7 +108,7 @@ module screenlayout(
         wire [2:0]  cdpixel_out3;
         char_string_display cd_out3(clock_65mhz,hcount,vcount,
                                     cdpixel_out3, cstring_out3,
-                                    11'd550, 10'd25+3*50);
+                                    11'd150, 10'd25+3*50);
         defparam cd_out3.NCHAR = 16;
         defparam cd_out3.NCHAR_BITS = 5;
 
@@ -117,7 +117,7 @@ module screenlayout(
         wire [2:0]  cdpixel_out4;
         char_string_display cd_out4(clock_65mhz,hcount,vcount,
                                    cdpixel_out4, cstring_out4,
-                                   11'd550, 10'd25+4*50);
+                                   11'd150, 10'd25+4*50);
         defparam cd_out4.NCHAR = 16;
         defparam cd_out4.NCHAR_BITS = 5;
 
@@ -126,7 +126,7 @@ module screenlayout(
         wire [2:0]  cdpixel_out5;
         char_string_display cd_out5(clock_65mhz,hcount,vcount,
                                    cdpixel_out5, cstring_out5,
-                                   11'd550, 10'd25+5*50);
+                                   11'd150, 10'd25+5*50);
         defparam cd_out5.NCHAR = 16;
         defparam cd_out5.NCHAR_BITS = 5;
     
@@ -136,7 +136,7 @@ module screenlayout(
         wire [2:0]  cdpixel_in1;
         char_string_display cd_in1(clock_65mhz,hcount,vcount,
                                    cdpixel_in1, cstring_in1,
-                                   11'd150, 10'd25+1*50);
+                                   11'd550, 10'd25+1*50);
         defparam cd_in1.NCHAR = 16;
         defparam cd_in1.NCHAR_BITS = 5; 
 
@@ -145,7 +145,7 @@ module screenlayout(
         wire [2:0]  cdpixel_in2;
         char_string_display cd_in2(clock_65mhz,hcount,vcount,
                                    cdpixel_in2, cstring_in2,
-                                   11'd150, 10'd25+2*50);
+                                   11'd550, 10'd25+2*50);
         defparam cd_in2.NCHAR = 16;
         defparam cd_in2.NCHAR_BITS = 5;
 
@@ -154,7 +154,7 @@ module screenlayout(
         wire [2:0]  cdpixel_in3;
         char_string_display cd_in3(clock_65mhz,hcount,vcount,
                                    cdpixel_in3, cstring_in3,
-                                   11'd150, 10'd25+3*50);
+                                   11'd550, 10'd25+3*50);
         defparam cd_in3.NCHAR = 16;
         defparam cd_in3.NCHAR_BITS = 5;
 
@@ -163,7 +163,7 @@ module screenlayout(
         wire [2:0]  cdpixel_in4;
         char_string_display cd_in4(clock_65mhz,hcount,vcount,
                                    cdpixel_in4, cstring_in4,
-                                   11'd150, 10'd25+4*50);
+                                   11'd550, 10'd25+4*50);
         defparam cd_in4.NCHAR = 16;
         defparam cd_in4.NCHAR_BITS = 5;
 
@@ -172,7 +172,7 @@ module screenlayout(
         wire [2:0]  cdpixel_in5;
         char_string_display cd_in5(clock_65mhz,hcount,vcount,
                                    cdpixel_in5, cstring_in5,
-                                   11'd150, 10'd25+5*50);
+                                   11'd550, 10'd25+5*50);
         defparam cd_in5.NCHAR = 16;
         defparam cd_in5.NCHAR_BITS = 5;
 
@@ -188,13 +188,6 @@ module screenlayout(
         defparam    cd.NCHAR_BITS = 4; 
 
     // display
-
-    reg [3:0] count;
-    always @(posedge clock_65mhz) begin
-        if (count!=12) begin
-            if (display) count <= count+1;
-        end
-    end
     
     assign pixels = cdpixel_outgoing | cdpixel_incoming | cdpixel_input |
                     cdpixel_out1 | cdpixel_out2 | cdpixel_out3 | cdpixel_out4 | cdpixel_out5 |

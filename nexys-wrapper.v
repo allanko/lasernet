@@ -91,6 +91,11 @@ wire openTCP;
 debounce db1(.reset(reset),.clock(clocksys),
               .noisy(BTNC),.clean(openTCP));
 
+// BTNL for saving keyboard data to outgoing message block
+wire save;
+debounce db2(.reset(reset),.clock(clocksys),
+              .noisy(BTNL),.clean(save));
+
 
 ///////////////////// INSTANTIATE AND WIRE UP MODULES //////////////////////////
 
@@ -149,22 +154,14 @@ assign SNmax = 32'hA; // set SNmax to 10
 //// each packet is 16 characters, can store/display 5 packets at a time
 
 // array form
-wire [16*8 - 1:0] outgoingarray[4:0];  // change these to reg, i think
 wire [16*8 - 1:0] incomingarray[4:0]; 
 
 // bus form
 wire [16*8*5 - 1 : 0] outgoing;
 wire [16*8*5 - 1 : 0] incoming;
-assign outgoing = {outgoingarray[4], outgoingarray[3], outgoingarray[2], outgoingarray[1], outgoingarray[0]};
 assign incoming = {incomingarray[4], incomingarray[3], incomingarray[2], incomingarray[1], incomingarray[0]};
 
 // temp statements here - remove this section
-assign outgoingarray[0] = "[     blank    ]";
-assign outgoingarray[1] = "[     blank    ]";
-assign outgoingarray[2] = "[     blank    ]";
-assign outgoingarray[3] = "[     blank    ]";
-assign outgoingarray[4] = "[     blank    ]";
-
 assign incomingarray[0] = "[     blank    ]";
 assign incomingarray[1] = "[     blank    ]";
 assign incomingarray[2] = "[     blank    ]";
@@ -176,7 +173,8 @@ assign incomingarray[4] = "[     blank    ]";
 wire [16*8 - 1 : 0] currentkeyboard;
 keyboardexport kbdexport1(.clock_65mhz(clock_65mhz), .reset(reset),
                           .ps2_clock(PS2_CLK), .ps2_data(PS2_DATA),
-                          .cstring(currentkeyboard)
+                          .cstring(currentkeyboard),
+                          .save(save), .messageout(outgoing)
                           );
 
 ///////////////////////////  XVGA DISPLAY ////////////////////////////////////////

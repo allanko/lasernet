@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date             : Sat Jan 07 19:40:16 2017
+| Date             : Sat Jan 07 21:42:09 2017
 | Host             : allanko running 64-bit major release  (build 9200)
 | Command          : report_power -file labkit_power_routed.rpt -pb labkit_power_summary_routed.pb -rpx labkit_power_routed.rpx
 | Design           : labkit
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.247 |
-| Dynamic (W)              | 0.142 |
+| Total On-Chip Power (W)  | 0.249 |
+| Dynamic (W)              | 0.144 |
 | Device Static (W)        | 0.105 |
 | Effective TJA (C/W)      | 4.6   |
 | Max Ambient (C)          | 98.9  |
@@ -50,19 +50,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.002 |        8 |       --- |             --- |
-| Slice Logic              |     0.002 |     1780 |       --- |             --- |
-|   LUT as Logic           |     0.002 |      835 |     63400 |            1.32 |
-|   CARRY4                 |    <0.001 |      253 |     15850 |            1.60 |
-|   F7/F8 Muxes            |    <0.001 |       34 |     63400 |            0.05 |
-|   Register               |    <0.001 |      282 |    126800 |            0.22 |
+| Slice Logic              |     0.003 |     2567 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1046 |     63400 |            1.65 |
+|   CARRY4                 |    <0.001 |      258 |     15850 |            1.63 |
+|   Register               |    <0.001 |      870 |    126800 |            0.69 |
+|   F7/F8 Muxes            |    <0.001 |       35 |     63400 |            0.06 |
 |   LUT as Distributed RAM |    <0.001 |        8 |     19000 |            0.04 |
-|   Others                 |     0.000 |       98 |       --- |             --- |
-| Signals                  |     0.003 |     1217 |       --- |             --- |
+|   Others                 |     0.000 |      101 |       --- |             --- |
+| Signals                  |     0.004 |     2009 |       --- |             --- |
 | Block RAM                |     0.005 |      7.5 |       135 |            5.56 |
 | MMCM                     |     0.122 |        1 |         6 |           16.67 |
-| I/O                      |     0.008 |       79 |       210 |           37.62 |
+| I/O                      |     0.008 |       80 |       210 |           38.10 |
 | Static Power             |     0.105 |          |           |                 |
-| Total                    |     0.247 |          |           |                 |
+| Total                    |     0.249 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.028 |       0.012 |      0.016 |
+| Vccint    |       1.000 |     0.029 |       0.013 |      0.016 |
 | Vccaux    |       1.800 |     0.086 |       0.068 |      0.018 |
 | Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -146,12 +146,13 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| labkit                   |     0.142 |
+| labkit                   |     0.144 |
 |   clock65                |     0.122 |
 |     inst                 |     0.122 |
 |   db1                    |    <0.001 |
+|   db2                    |    <0.001 |
 |   display                |    <0.001 |
-|   face                   |     0.007 |
+|   face                   |     0.006 |
 |     cd                   |    <0.001 |
 |       f                  |    <0.001 |
 |     cd_in1               |    <0.001 |
@@ -180,7 +181,7 @@ Table of Contents
 |       f                  |    <0.001 |
 |     cd_outgoing          |    <0.001 |
 |       f                  |    <0.001 |
-|   kbdexport1             |     0.002 |
+|   kbdexport1             |     0.004 |
 |     kbd                  |    <0.001 |
 |       myps2              |    <0.001 |
 |         fifo_reg_0_7_0_5 |    <0.001 |

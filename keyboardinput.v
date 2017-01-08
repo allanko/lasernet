@@ -4,16 +4,20 @@
 ///////////////////////////////////////////////////////////////////////////////// 
 
 //// bumping the last sixteen characters to the outgoing message block //////////
+//// outgoing message block memory lives in this module! ////////////////////////
 
 module keyboardexport(
     input clock_65mhz, 
     input reset,
     input ps2_clock,
     input ps2_data,
-    output reg [16*8 - 1:0] cstring  // outgoing message
+    input save,                       // when save goes high, last sixteen characters get added to memory
+    output reg [16*8 - 1:0] cstring,  // last sixteen characters typed
+    output [16*8*5 - 1:0] messageout  // 16*8 by 5 block of memory for holding outgoing message
     );
 
- 
+    // reading in sixteen characters from the keyboard
+
     wire [7:0] ascii;
     wire       char_rdy;     
 
@@ -21,33 +25,135 @@ module keyboardexport(
                         ps2_clock, ps2_data, 
                         ascii, char_rdy);
                
-    reg [3:0] count = 15;
+    reg [3:0] kbdin_count = 0;
     reg [7:0] last_ascii;
 
     always @(posedge clock_65mhz) begin
 
-        count <= reset ? 15 : (char_rdy ? count-1 : count);
-        last_ascii <= char_rdy ? ascii : last_ascii;
+        kbdin_count <= reset ? 0 : char_rdy ? kbdin_count-1 : kbdin_count;
+        last_ascii <= reset ? " " : char_rdy ? ascii : last_ascii;
 
-        cstring[7:0] <= (count==0) ? last_ascii : cstring[7:0];
-        cstring[7+'o10:'o10] <= (count==1) ? last_ascii: cstring[7+'o10:'o10];
-        cstring[7+'o20:'o20] <= (count==2) ? last_ascii: cstring[7+'o20:'o20];
-        cstring[7+'o30:'o30] <= (count==3) ? last_ascii: cstring[7+'o30:'o30];
-        cstring[7+'o40:'o40] <= (count==4) ? last_ascii: cstring[7+'o40:'o40];
-        cstring[7+'o50:'o50] <= (count==5) ? last_ascii: cstring[7+'o50:'o50];
-        cstring[7+'o60:'o60] <= (count==6) ? last_ascii: cstring[7+'o60:'o60];
-        cstring[7+'o70:'o70] <= (count==7) ? last_ascii: cstring[7+'o70:'o70];
+        cstring[7:0] <= reset ? "" : (kbdin_count==0) ? last_ascii : cstring[7:0];
+        cstring[7+'o10:'o10] <= reset ? "" : (kbdin_count==1) ? last_ascii: cstring[7+'o10:'o10];
+        cstring[7+'o20:'o20] <= reset ? "" : (kbdin_count==2) ? last_ascii: cstring[7+'o20:'o20];
+        cstring[7+'o30:'o30] <= reset ? "" : (kbdin_count==3) ? last_ascii: cstring[7+'o30:'o30];
+        cstring[7+'o40:'o40] <= reset ? "" : (kbdin_count==4) ? last_ascii: cstring[7+'o40:'o40];
+        cstring[7+'o50:'o50] <= reset ? "" : (kbdin_count==5) ? last_ascii: cstring[7+'o50:'o50];
+        cstring[7+'o60:'o60] <= reset ? "" : (kbdin_count==6) ? last_ascii: cstring[7+'o60:'o60];
+        cstring[7+'o70:'o70] <= reset ? "" : (kbdin_count==7) ? last_ascii: cstring[7+'o70:'o70];
 
-        cstring[7+'o100:'o100] <= (count==8) ? last_ascii: cstring[7+'o100:'o100];
-        cstring[7+'o110:'o110] <= (count==9) ? last_ascii: cstring[7+'o110:'o110];
-        cstring[7+'o120:'o120] <= (count==10) ? last_ascii: cstring[7+'o120:'o120];
-        cstring[7+'o130:'o130] <= (count==11) ? last_ascii: cstring[7+'o130:'o130];
-        cstring[7+'o140:'o140] <= (count==12) ? last_ascii: cstring[7+'o140:'o140];
-        cstring[7+'o150:'o150] <= (count==13) ? last_ascii: cstring[7+'o150:'o150];
-        cstring[7+'o160:'o160] <= (count==14) ? last_ascii: cstring[7+'o160:'o160];
-        cstring[7+'o170:'o170] <= (count==15) ? last_ascii: cstring[7+'o170:'o170];
+        cstring[7+'o100:'o100] <= reset ? "" : (kbdin_count==8) ? last_ascii: cstring[7+'o100:'o100];
+        cstring[7+'o110:'o110] <= reset ? "" : (kbdin_count==9) ? last_ascii: cstring[7+'o110:'o110];
+        cstring[7+'o120:'o120] <= reset ? "" : (kbdin_count==10) ? last_ascii: cstring[7+'o120:'o120];
+        cstring[7+'o130:'o130] <= reset ? "" : (kbdin_count==11) ? last_ascii: cstring[7+'o130:'o130];
+        cstring[7+'o140:'o140] <= reset ? "" : (kbdin_count==12) ? last_ascii: cstring[7+'o140:'o140];
+        cstring[7+'o150:'o150] <= reset ? "" : (kbdin_count==13) ? last_ascii: cstring[7+'o150:'o150];
+        cstring[7+'o160:'o160] <= reset ? "" : (kbdin_count==14) ? last_ascii: cstring[7+'o160:'o160];
+        cstring[7+'o170:'o170] <= reset ? "" : (kbdin_count==15) ? last_ascii: cstring[7+'o170:'o170];
         
     end
+
+    // establishing message block for output 
+
+//    reg [16*8*5 - 1:0] messageoutarray[4:0];
+//
+//    assign messageout = {messageoutarray[4], 
+//                         messageoutarray[3], 
+//                         messageoutarray[2], 
+//                         messageoutarray[1], 
+//                         messageoutarray[0]};
+
+    reg [16*8 - 1:0] messageoutarray4;
+    reg [16*8 - 1:0] messageoutarray3;
+    reg [16*8 - 1:0] messageoutarray2;
+    reg [16*8 - 1:0] messageoutarray1;
+    reg [16*8 - 1:0] messageoutarray0;
+
+    assign messageout = {messageoutarray4,
+                         messageoutarray3,
+                         messageoutarray2,
+                         messageoutarray1,
+                         messageoutarray0};
+
+    reg [2:0] messageout_index = 3'd0;
+    parameter [2:0] MAXINDEX = 3'd4;
+
+    // when save goes high, put last sixteen characters from keyboard into outgoing memory 
+
+    parameter S_WAIT = 2'b00;
+    parameter S_SAVE = 2'b01;
+    parameter S_RESET = 2'b10;
+
+    reg [1:0] state = S_RESET;
+    reg [1:0] laststate;
+
+    always @(posedge clock_65mhz) begin
+        laststate <= state;
+
+        case(state)
+
+            S_WAIT : begin
+
+                state <= reset ? S_RESET : 
+                         save ? S_SAVE : 
+                         S_WAIT;
+
+            end
+
+            S_SAVE : begin
+
+                if (state != laststate) begin
+                    if (messageout_index == 3'd0) messageoutarray0 <= cstring;
+                    else if (messageout_index == 3'd1) messageoutarray1 <= cstring;
+                    else if (messageout_index == 3'd2) messageoutarray2 <= cstring;
+                    else if (messageout_index == 3'd3) messageoutarray3 <= cstring;
+                    else messageoutarray4 <= cstring;
+                end 
+
+//                messageoutarray[messageout_index] <= (state != laststate) ? cstring : messageoutarray[messageout_index];
+
+                messageout_index <= (state != laststate) & (messageout_index == MAXINDEX) ? 3'd0 : 
+                                    (state != laststate) ? messageout_index + 3'd1 :
+                                    messageout_index;
+
+                state <= reset ? S_RESET : 
+                         save ? S_SAVE : 
+                         S_WAIT;
+
+            end
+
+            S_RESET : begin
+
+                  messageoutarray0 <= "[     blank    ]";
+                  messageoutarray1 <= "[     blank    ]";
+                  messageoutarray2 <= "[     blank    ]";
+                  messageoutarray3 <= "[     blank    ]";
+                  messageoutarray4 <= "[     blank    ]";
+
+//                messageoutarray[0] <= "[     blank    ]";
+//                messageoutarray[1] <= "[     blank    ]";
+//                messageoutarray[2] <= "[     blank    ]";
+//                messageoutarray[3] <= "[     blank    ]";
+//                messageoutarray[4] <= "[     blank    ]";
+
+                messageout_index <= 3'd0;
+
+                state <= reset ? S_RESET : 
+                         S_WAIT;
+
+            end
+
+            default : begin
+
+                state <= reset;
+
+            end 
+
+        endcase
+
+    end
+
+
 
 endmodule
 
