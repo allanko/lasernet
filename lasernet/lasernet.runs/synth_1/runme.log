@@ -14,13 +14,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15608 
+INFO: Helper process launched with PID 14784 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 277.938 ; gain = 68.086
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 277.438 ; gain = 67.539
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'labkit' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:22]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5940-allanko/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5940-allanko/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-638] synthesizing module 'display_8hex' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/display_8hex.v:16]
 	Parameter bits bound to: 13 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'display_8hex' (2#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/display_8hex.v:16]
@@ -41,10 +41,10 @@ INFO: [Synth 8-638] synthesizing module 'mainfsm' [C:/Users/Allan/Documents/MIT/
 	Parameter S_FIN_WAIT bound to: 4'b0111 
 INFO: [Synth 8-256] done synthesizing module 'mainfsm' (5#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:24]
 INFO: [Synth 8-638] synthesizing module 'keyboardexport' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:8]
-INFO: [Synth 8-638] synthesizing module 'ps2_ascii_input' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:63]
-INFO: [Synth 8-638] synthesizing module 'ps2' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:191]
-INFO: [Synth 8-256] done synthesizing module 'ps2' (6#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:191]
-INFO: [Synth 8-256] done synthesizing module 'ps2_ascii_input' (7#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:63]
+INFO: [Synth 8-638] synthesizing module 'ps2_ascii_input' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:57]
+INFO: [Synth 8-638] synthesizing module 'ps2' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:185]
+INFO: [Synth 8-256] done synthesizing module 'ps2' (6#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:185]
+INFO: [Synth 8-256] done synthesizing module 'ps2_ascii_input' (7#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:57]
 INFO: [Synth 8-256] done synthesizing module 'keyboardexport' (8#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v:8]
 INFO: [Synth 8-638] synthesizing module 'xvga' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/xvga.v:24]
 INFO: [Synth 8-256] done synthesizing module 'xvga' (9#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/xvga.v:24]
@@ -164,7 +164,7 @@ WARNING: [Synth 8-3331] design labkit has unconnected port BTNL
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNR
 WARNING: [Synth 8-3331] design labkit has unconnected port BTND
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 316.961 ; gain = 107.109
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 317.398 ; gain = 107.500
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -174,7 +174,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 316.961 ; gain = 107.109
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 317.398 ; gain = 107.500
 ---------------------------------------------------------------------------------
 WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
@@ -209,8 +209,8 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5940-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
-Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5940-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
+Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
+Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
 Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]
 Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/labkit_propImpl.xdc].
@@ -220,24 +220,24 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 641.258 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 641.336 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 641.258 ; gain = 431.406
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 641.336 ; gain = 431.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 641.258 ; gain = 431.406
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 641.336 ; gain = 431.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5940-allanko/dcp/clk_wiz_0_in_context.xdc}, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5940-allanko/dcp/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/dcp/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-15244-allanko/dcp/clk_wiz_0_in_context.xdc}, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 641.258 ; gain = 431.406
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 641.336 ; gain = 431.438
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clean" won't be mapped to RAM because it is too sparse
@@ -287,7 +287,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'flagsoutSYN_reg' [C:/Users/
 WARNING: [Synth 8-327] inferring latch for variable 'flagsoutACK_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:61]
 WARNING: [Synth 8-327] inferring latch for variable 'statedisplay_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:105]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 641.258 ; gain = 431.406
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 641.336 ; gain = 431.438
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -840,7 +840,7 @@ WARNING: [Synth 8-3332] Sequential element (nextACK_reg[5]) is unused and will b
 WARNING: [Synth 8-3332] Sequential element (nextACK_reg[4]) is unused and will be removed from module mainfsm.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 641.258 ; gain = 431.406
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 641.336 ; gain = 431.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -881,10 +881,10 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clock65/clk_out_65mhz' to pin 'clock65/bbstub_clk_out_65mhz/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 641.258 ; gain = 431.406
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 641.336 ; gain = 431.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 648.730 ; gain = 438.879
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 648.926 ; gain = 439.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -896,7 +896,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 648.730 ; gain = 438.879
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 648.926 ; gain = 439.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -920,7 +920,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 648.730 ; gain = 438.879
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -933,7 +933,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 648.730 ; gain = 438.879
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -945,25 +945,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 648.730 ; gain = 438.879
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 648.730 ; gain = 438.879
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 648.730 ; gain = 438.879
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 648.730 ; gain = 438.879
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1046,11 +1046,11 @@ Report Instance Areas:
 |25    |  xvga1         |xvga                                 |   833|
 +------+----------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 648.730 ; gain = 438.879
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 186 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 648.730 ; gain = 114.582
-Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 648.730 ; gain = 438.879
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 648.926 ; gain = 115.090
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 648.926 ; gain = 439.027
 INFO: [Project 1-571] Translating synthesized netlist
 WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
@@ -1096,7 +1096,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 175 Infos, 231 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 655.336 ; gain = 445.484
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 654.730 ; gain = 444.832
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/labkit.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 655.336 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Jan 07 19:27:04 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 654.730 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 07 19:38:11 2017...

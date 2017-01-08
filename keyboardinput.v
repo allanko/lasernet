@@ -24,17 +24,11 @@ module keyboardexport(
     reg [3:0] count = 15;
     reg [7:0] last_ascii;
 
-    reg [13:0] next_write_addr = 14'b0, last_trans_addr = 14'b0;
-    reg update;
-
-    reg [3:0] push_count = 4'b0;
-
     always @(posedge clock_65mhz) begin
+
         count <= reset ? 15 : (char_rdy ? count-1 : count);
         last_ascii <= char_rdy ? ascii : last_ascii;
-    end
-        
-    always @(posedge clock_65mhz) begin
+
         cstring[7:0] <= (count==0) ? last_ascii : cstring[7:0];
         cstring[7+'o10:'o10] <= (count==1) ? last_ascii: cstring[7+'o10:'o10];
         cstring[7+'o20:'o20] <= (count==2) ? last_ascii: cstring[7+'o20:'o20];
