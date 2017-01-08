@@ -132,6 +132,7 @@ mainfsm statemachine(.clk(clocksys), .reset(reset), .open(openTCP), .packetsent(
 assign to_display = {incomingACK[3:0], incomingSEQ[3:0], outgoingACK[3:0], outgoingSEQ[3:0], 12'h000, state};
 assign LED[2:0] = {outgoingflags[4], outgoingflags[1], outgoingflags[0]};
 
+
 // temp statements here - remove this section
 assign packetsent = SW[14]; // simulate a packet being sent
 
@@ -142,9 +143,44 @@ assign incomingSEQ = {28'd0, SW[7:4]};
 
 assign SNmax = 32'hA; // set SNmax to 10
 
+
+///////////////////////////// MESSAGE STORAGE /////////////////////////////////////////////////////////
+//// create memory blocks for holding incoming and outgoing messages
+//// each packet is 16 characters, can store/display 5 packets at a time
+
+// array form
+wire [16*8 - 1:0] outgoingarray[4:0];  // change these to reg, i think
+wire [16*8 - 1:0] incomingarray[4:0]; 
+
+// bus form
+wire [16*8*5 - 1 : 0] outgoing;
+wire [16*8*5 - 1 : 0] incoming;
+assign outgoing = {outgoingarray[4], outgoingarray[3], outgoingarray[2], outgoingarray[1], outgoingarray[0]};
+assign incoming = {incomingarray[4], incomingarray[3], incomingarray[2], incomingarray[1], incomingarray[0]};
+
+// temp statements here - remove this section
+assign outgoingarray[0] = "[     blank    ]";
+assign outgoingarray[1] = "[     blank    ]";
+assign outgoingarray[2] = "[     blank    ]";
+assign outgoingarray[3] = "[     blank    ]";
+assign outgoingarray[4] = "[     blank    ]";
+
+assign incomingarray[0] = "[     blank    ]";
+assign incomingarray[1] = "[     blank    ]";
+assign incomingarray[2] = "[     blank    ]";
+assign incomingarray[3] = "[     blank    ]";
+assign incomingarray[4] = "[     blank    ]";
+
+
+/////////////////////////// KEYBOARD INPUT //////////////////////////////////////
+wire [16*8 - 1 : 0] currentkeyboard;
+keyboardexport kbdexport1(.clock_65mhz(clock_65mhz), .reset(reset),
+                          .ps2_clock(PS2_CLK), .ps2_data(PS2_DATA),
+                          .cstring(currentkeyboard)
+                          );
+
 ///////////////////////////  XVGA DISPLAY ////////////////////////////////////////
  
-
 //  generate basic XVGA video signals
 wire [10:0] hcount;
 wire [9:0]  vcount;
@@ -153,10 +189,11 @@ xvga xvga1(clock_65mhz,hcount,vcount,hsync,vsync,blank);
  
 wire [2:0] sample_pixels;
 wire dis;
-interface face( .clock_65mhz(clock_65mhz),
-                .hcount(hcount),
-                .vcount(vcount),
+screenlayout face( .clock_65mhz(clock_65mhz),
+                .hcount(hcount), .vcount(vcount),
                 .display(dis),
+                .messageout(outgoing), .messagein(incoming),
+                .keyboard(currentkeyboard),
                 .pixels(sample_pixels) );
                     
 //  red text box for displaying user input  
@@ -165,63 +202,12 @@ blob #(.WIDTH(800),.HEIGHT(128),.COLOR(24'hFF_00_00))   // red!
      paddle1(.x(11'd100),.y(10'd600),.hcount(hcount),.vcount(vcount),
              .pixel(paddle_pixel));
 
-// user input display module: sample string in middle of red text box
-reg [16*8-1:0] cstring;
-wire [2:0]  cdpixel;
-char_string_display cd(clock_65mhz,hcount,vcount,
-              cdpixel,cstring,11'd383,10'd650);
-defparam    cd.NCHAR = 16;
-defparam    cd.NCHAR_BITS = 4; 
-
- 
-/////////////////////////////////////////////////// keyboard input
-wire [7:0] ascii;
-wire       char_rdy;       
-ps2_ascii_input kbd(clock_65mhz, reset, PS2_CLK, 
-           PS2_DATA, ascii, char_rdy);
-           
-reg [3:0] count = 15;
-reg [7:0] last_ascii;
-
-//  assign cstring = {8{last_ascii}}; -- KEYBOARD INPUT
-reg [8*8-1:0] cstring_bram_temp,cstring_bram;
-reg [13:0] next_write_addr = 14'b0, last_trans_addr = 14'b0;
-reg update;
-
-reg [3:0] push_count = 4'b0;
-
-always @(posedge clock_65mhz) begin
-    count <= reset ? 15 : (char_rdy ? count-1 : count);
-    last_ascii <= char_rdy ? ascii : last_ascii;
-end
-    
-always @(posedge clock_65mhz) begin
-    cstring[7:0] <= (count==0) ? last_ascii : cstring[7:0];
-    cstring[7+'o10:'o10] <= (count==1) ? last_ascii: cstring[7+'o10:'o10];
-    cstring[7+'o20:'o20] <= (count==2) ? last_ascii: cstring[7+'o20:'o20];
-    cstring[7+'o30:'o30] <= (count==3) ? last_ascii: cstring[7+'o30:'o30];
-    cstring[7+'o40:'o40] <= (count==4) ? last_ascii: cstring[7+'o40:'o40];
-    cstring[7+'o50:'o50] <= (count==5) ? last_ascii: cstring[7+'o50:'o50];
-    cstring[7+'o60:'o60] <= (count==6) ? last_ascii: cstring[7+'o60:'o60];
-    cstring[7+'o70:'o70] <= (count==7) ? last_ascii: cstring[7+'o70:'o70];
-
-    cstring[7+'o100:'o100] <= (count==8) ? last_ascii: cstring[7+'o100:'o100];
-    cstring[7+'o110:'o110] <= (count==9) ? last_ascii: cstring[7+'o110:'o110];
-    cstring[7+'o120:'o120] <= (count==10) ? last_ascii: cstring[7+'o120:'o120];
-    cstring[7+'o130:'o130] <= (count==11) ? last_ascii: cstring[7+'o130:'o130];
-    cstring[7+'o140:'o140] <= (count==12) ? last_ascii: cstring[7+'o140:'o140];
-    cstring[7+'o150:'o150] <= (count==13) ? last_ascii: cstring[7+'o150:'o150];
-    cstring[7+'o160:'o160] <= (count==14) ? last_ascii: cstring[7+'o160:'o160];
-    cstring[7+'o170:'o170] <= (count==15) ? last_ascii: cstring[7+'o170:'o170];
-    
-end
-
-/////////////////////////////////////// white border around screen
+//  white border around screen
 wire [2:0] white_outline_pixels;
 assign white_outline_pixels = (hcount==0 | hcount==1023 | vcount==0 | vcount==767) ? 7 : 0;
 
 
-/////////////////////////////////////// output to vga
+/////// output to vga
 
 // screenmode is a switch that selects what to show on the screen
 
@@ -238,7 +224,6 @@ always @(posedge clock_65mhz) begin
   else begin
      // default: text
    rgb <=  sample_pixels |
-           cdpixel |
            white_outline_pixels ;
   end
 end

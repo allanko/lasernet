@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1483819667">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1483835164">
   <File Type="RDS-PROPCONSTRS" Name="labkit_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="labkit.tcl"/>
   <File Type="RDS-RDS" Name="labkit.vds"/>
@@ -24,6 +24,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../cstring/cstringdisp.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../keyboardinput.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -72,14 +79,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../interface.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../ps2_kbd.v">
+    <File Path="$PPRDIR/../screenlayout.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

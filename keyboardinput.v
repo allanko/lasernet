@@ -1,48 +1,82 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 12/10/2016 06:38:04 AM
-// Design Name: 
-// Module Name: ps2_kbd
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+// allanko and keam for 6.111 fall 2016 - lasernet 
+///////////////////////////////////////////////////////////////////////////////// 
 
-//
-// File:   ps2_kbd.v
-// Date:   24-Oct-05
-// Author: C. Terman / I. Chuang
-//
-// PS2 keyboard input for 6.111 labkit
-//
-// INPUTS:
-//
-//   clock_27mhz   - master clock
-//   reset         - active high
-//   clock         - ps2 interface clock
-//   data          - ps2 interface data
-//
-// OUTPUTS:
-//
-//   ascii         - 8 bit ascii code for current character
-//   ascii_ready   - one clock cycle pulse indicating new char received
+//// bumping the last sixteen characters to the outgoing message block //////////
+
+module keyboardexport(
+    input clock_65mhz, 
+    input reset,
+    input ps2_clock,
+    input ps2_data,
+    output reg [16*8 - 1:0] cstring  // outgoing message
+    );
+
+ 
+    wire [7:0] ascii;
+    wire       char_rdy;     
+
+    ps2_ascii_input kbd(clock_65mhz, reset, 
+                        ps2_clock, ps2_data, 
+                        ascii, char_rdy);
+               
+    reg [3:0] count = 15;
+    reg [7:0] last_ascii;
+
+    reg [13:0] next_write_addr = 14'b0, last_trans_addr = 14'b0;
+    reg update;
+
+    reg [3:0] push_count = 4'b0;
+
+    always @(posedge clock_65mhz) begin
+        count <= reset ? 15 : (char_rdy ? count-1 : count);
+        last_ascii <= char_rdy ? ascii : last_ascii;
+    end
+        
+    always @(posedge clock_65mhz) begin
+        cstring[7:0] <= (count==0) ? last_ascii : cstring[7:0];
+        cstring[7+'o10:'o10] <= (count==1) ? last_ascii: cstring[7+'o10:'o10];
+        cstring[7+'o20:'o20] <= (count==2) ? last_ascii: cstring[7+'o20:'o20];
+        cstring[7+'o30:'o30] <= (count==3) ? last_ascii: cstring[7+'o30:'o30];
+        cstring[7+'o40:'o40] <= (count==4) ? last_ascii: cstring[7+'o40:'o40];
+        cstring[7+'o50:'o50] <= (count==5) ? last_ascii: cstring[7+'o50:'o50];
+        cstring[7+'o60:'o60] <= (count==6) ? last_ascii: cstring[7+'o60:'o60];
+        cstring[7+'o70:'o70] <= (count==7) ? last_ascii: cstring[7+'o70:'o70];
+
+        cstring[7+'o100:'o100] <= (count==8) ? last_ascii: cstring[7+'o100:'o100];
+        cstring[7+'o110:'o110] <= (count==9) ? last_ascii: cstring[7+'o110:'o110];
+        cstring[7+'o120:'o120] <= (count==10) ? last_ascii: cstring[7+'o120:'o120];
+        cstring[7+'o130:'o130] <= (count==11) ? last_ascii: cstring[7+'o130:'o130];
+        cstring[7+'o140:'o140] <= (count==12) ? last_ascii: cstring[7+'o140:'o140];
+        cstring[7+'o150:'o150] <= (count==13) ? last_ascii: cstring[7+'o150:'o150];
+        cstring[7+'o160:'o160] <= (count==14) ? last_ascii: cstring[7+'o160:'o160];
+        cstring[7+'o170:'o170] <= (count==15) ? last_ascii: cstring[7+'o170:'o170];
+        
+    end
+
+endmodule
 
 
-/////////////////////////////////////////////////////////////////////////////
 
+/////////////////////// keyboard input ////////////////////////////////////
 module ps2_ascii_input(clock_27mhz, reset, clock, data, ascii, ascii_ready);
-   
+
+   // INPUTS:
+   //
+   //   clock_27mhz   - master clock
+   //   reset         - active high
+   //   clock         - ps2 interface clock
+   //   data          - ps2 interface data
+   //
+   // OUTPUTS:
+   //
+   //   ascii         - 8 bit ascii code for current character
+   //   ascii_ready   - one clock cycle pulse indicating new char received
+   //
+   //
+   // Author: C. Terman / I. Chuang
+   // Date: 24-Oct-05
    // module to generate ascii code for keyboard input
    // this is module works synchronously with the system clock
 
