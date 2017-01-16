@@ -71,6 +71,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../makepacket.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../keyboardinput.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -142,14 +149,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../makepacket.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../checkpacket.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -201,22 +200,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0.xml"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0.veo"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0.v"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_clk_wiz.v"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="mmcm_pll_drp_func_us_pll.vh"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0.xdc"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="mmcm_pll_drp_func_7s_pll.vh"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="mmcm_pll_drp_func_7s_mmcm.vh"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_board.xdc"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="mmcm_pll_drp_func_us_mmcm.vh"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="doc/clk_wiz_v5_3_changelog.txt"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="clk_wiz_0"/>
@@ -253,9 +236,7 @@
     </Run>
     <Run Id="clk_wiz_0_synth_1" Type="Ft3:Synth" SrcSet="clk_wiz_0" Part="xc7a100tcsg324-3" ConstrsSet="clk_wiz_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/clk_wiz_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -279,9 +260,7 @@
     </Run>
     <Run Id="clk_wiz_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-3" ConstrsSet="clk_wiz_0" Description="Default settings for Implementation." SynthRun="clk_wiz_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

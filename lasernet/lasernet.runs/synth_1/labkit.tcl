@@ -23,6 +23,7 @@ read_mem {{C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/fo
 read_verilog -library xil_defaultlib {
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/font_rom.v}
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v}
+  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/makepacket.v}
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/keyboardinput.v}
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/synchronize.v}
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v}

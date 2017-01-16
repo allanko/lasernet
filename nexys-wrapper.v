@@ -99,7 +99,7 @@ debounce db2(.reset(reset),.clock(clocksys),
 
 ///////////////////// INSTANTIATE AND WIRE UP MODULES //////////////////////////
 
-// instantiate main state machine
+//////////////////////////// MAIN STATE MACHINE
 
 wire packetsent;            // goes high for a cycle when a packet is sent
 
@@ -107,8 +107,6 @@ wire incomingready;         // incoming packet is ready
 wire [31:0] incomingACK;    // incoming acknowledgment number
 wire [31:0] incomingSEQ;    // incoming sequence number
 wire [8:0] incomingflags;   // incoming TCP flags
-
-wire control;               // if high, sending control packets / if low, sending data
 
 wire outgoingready;         // outgoing packet is ready
 wire [31:0] outgoingACK;    // outgoing acknowledgment number
@@ -129,27 +127,11 @@ mainfsm statemachine(.clk(clocksys), .reset(reset), .open(openTCP), .packetsent(
                       .ISN(ISN), .SNmax(SNmax),
                       .window(windowsize),
                       .readyin(incomingready), .ACKin(incomingACK), .SEQin(incomingSEQ), .flagsin(incomingflags),
-                      .control(control),
                       .readyout(outgoingready), .ACKout(outgoingACK), .SEQout(outgoingSEQ), .flagsout(outgoingflags),
                       .statedisplay(state));
 
-// display some important numbers to seven-segment display
-assign to_display = {incomingACK[3:0], incomingSEQ[3:0], outgoingACK[3:0], outgoingSEQ[3:0], 12'h000, state};
-assign LED[2:0] = {outgoingflags[4], outgoingflags[1], outgoingflags[0]};
+///////////////////////////// MESSAGE STORAGE 
 
-
-// temp statements here - remove this section
-assign packetsent = SW[14]; // simulate a packet being sent
-
-
-assign incomingflags = {4'b0000, SW[2], 2'b00, SW[1], SW[0]}; // simulate incoming ack, syn, fin
-assign incomingACK = {28'd0, SW[11:8]};
-assign incomingSEQ = {28'd0, SW[7:4]};
-
-assign SNmax = 32'hA; // set SNmax to 10
-
-
-///////////////////////////// MESSAGE STORAGE /////////////////////////////////////////////////////////
 //// create memory blocks for holding incoming and outgoing messages
 //// each packet is 16 characters, can store/display 5 packets at a time
 
@@ -168,14 +150,43 @@ assign incomingarray[2] = "[     blank    ]";
 assign incomingarray[3] = "[     blank    ]";
 assign incomingarray[4] = "[     blank    ]";
 
+/////////////////////////// KEYBOARD INPUT
 
-/////////////////////////// KEYBOARD INPUT //////////////////////////////////////
 wire [16*8 - 1 : 0] currentkeyboard;
 keyboardexport kbdexport1(.clock_65mhz(clock_65mhz), .reset(reset),
                           .ps2_clock(PS2_CLK), .ps2_data(PS2_DATA),
                           .cstring(currentkeyboard),
                           .save(save), .messageout(outgoing)
                           );
+
+///////////////////////// PACKET GENERATOR AND CHECKSUM
+
+wire [32*9 - 1 : 0] outgoingpacket;
+wire readytotransmit;
+
+makepacket packetgen(.clk(clocksys), .reset(reset), 
+                      .ISN(ISN), .readyin(outgoingready),
+                      .window(windowsize),
+                      .seq(outgoingSEQ),.ack(outgoingACK), .flags(outgoingflags),
+                      .message(outgoing),
+                      .packet(outgoingpacket),.readyout(readytotransmit));
+
+
+
+// display some important numbers to seven-segment display
+assign to_display = {incomingACK[3:0], incomingSEQ[3:0], outgoingACK[3:0], outgoingSEQ[3:0], 12'h000, state};
+assign LED[2:0] = {outgoingflags[4], outgoingflags[1], outgoingflags[0]};
+
+
+// temp statements here - remove this section
+assign packetsent = SW[14]; // simulate a packet being sent
+
+assign incomingflags = {4'b0000, SW[2], 2'b00, SW[1], SW[0]}; // simulate incoming ack, syn, fin
+assign incomingACK = {28'd0, SW[11:8]};
+assign incomingSEQ = {28'd0, SW[7:4]};
+
+assign SNmax = 32'hA; // set SNmax to 10
+
 
 ///////////////////////////  XVGA DISPLAY ////////////////////////////////////////
  

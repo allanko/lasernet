@@ -53,16 +53,7 @@ module keyboardexport(
         
     end
 
-    // establishing message block for output 
-
-//    reg [16*8*5 - 1:0] messageoutarray[4:0];
-//
-//    assign messageout = {messageoutarray[4], 
-//                         messageoutarray[3], 
-//                         messageoutarray[2], 
-//                         messageoutarray[1], 
-//                         messageoutarray[0]};
-
+    // when we made this an indexed bus, the nonblocking assignments below didn't work properly
     reg [16*8 - 1:0] messageoutarray4;
     reg [16*8 - 1:0] messageoutarray3;
     reg [16*8 - 1:0] messageoutarray2;
@@ -110,8 +101,6 @@ module keyboardexport(
                     else messageoutarray4 <= cstring;
                 end 
 
-//                messageoutarray[messageout_index] <= (state != laststate) ? cstring : messageoutarray[messageout_index];
-
                 messageout_index <= (state != laststate) & (messageout_index == MAXINDEX) ? 3'd0 : 
                                     (state != laststate) ? messageout_index + 3'd1 :
                                     messageout_index;
@@ -129,12 +118,6 @@ module keyboardexport(
                   messageoutarray2 <= "[     blank    ]";
                   messageoutarray3 <= "[     blank    ]";
                   messageoutarray4 <= "[     blank    ]";
-
-//                messageoutarray[0] <= "[     blank    ]";
-//                messageoutarray[1] <= "[     blank    ]";
-//                messageoutarray[2] <= "[     blank    ]";
-//                messageoutarray[3] <= "[     blank    ]";
-//                messageoutarray[4] <= "[     blank    ]";
 
                 messageout_index <= 3'd0;
 

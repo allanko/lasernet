@@ -33,7 +33,6 @@ module mainfsm(
     input [31:0] ACKin,
     input [31:0] SEQin,
     input [8:0] flagsin,
-    output control,			// if high, sending control packets with no data - if low, sending data packets
     output reg readyout, 		// high for one cycle when you want to send a new packet
     output reg [31:0] ACKout,
     output reg [31:0] SEQout,
@@ -59,13 +58,6 @@ module mainfsm(
     reg flagsoutFIN;
 
     assign flagsout = {4'b0000, flagsoutACK, 2'b00, flagsoutSYN, flagsoutFIN};
-
-    // defining when to send control packets
-    assign control = ((state == S_ACTIVE_OPEN) | 
-    		   			(state == S_CONNECTED) | 
-    		   			(state == S_ACTIVATED) | 
-    		   			(state == S_FIN) | 
-    		   			(state == S_FIN_WAIT)) ? 1'b1 : 1'b0; 
 
     /////////////////// ESTABLISH STATES /////////////////////////////////////
     reg [3:0] state, nextstate;

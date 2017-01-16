@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Sat Jan 07 21:40:06 2017
+| Date         : Mon Jan 16 17:07:20 2017
 | Host         : allanko running 64-bit major release  (build 9200)
 | Command      : report_utilization -file labkit_utilization_synth.rpt -pb labkit_utilization_synth.pb
 | Design       : labkit
@@ -35,8 +35,8 @@ Table of Contents
 |   LUT as Memory            |    8 |     0 |     19000 |  0.04 |
 |     LUT as Distributed RAM |    8 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  862 |     0 |    126800 |  0.68 |
-|   Register as Flip Flop    |  862 |     0 |    126800 |  0.68 |
+| Slice Registers            |  865 |     0 |    126800 |  0.68 |
+|   Register as Flip Flop    |  865 |     0 |    126800 |  0.68 |
 |   Register as Latch        |    0 |     0 |    126800 |  0.00 |
 | F7 Muxes                   |   26 |     0 |     31700 |  0.08 |
 | F8 Muxes                   |    9 |     0 |     15850 |  0.06 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 194   |          Yes |         Set |            - |
-| 668   |          Yes |       Reset |            - |
+| 671   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,17 +149,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  668 |        Flop & Latch |
+| FDRE     |  671 |        Flop & Latch |
 | LUT1     |  445 |                 LUT |
-| LUT2     |  401 |                 LUT |
-| LUT6     |  345 |                 LUT |
+| LUT2     |  403 |                 LUT |
+| LUT6     |  346 |                 LUT |
 | CARRY4   |  258 |          CarryLogic |
 | FDSE     |  194 |        Flop & Latch |
-| LUT4     |  180 |                 LUT |
-| LUT3     |   86 |                 LUT |
-| LUT5     |   77 |                 LUT |
-| OBUF     |   33 |                  IO |
-| OBUFT    |   28 |                  IO |
+| LUT4     |  181 |                 LUT |
+| LUT3     |   83 |                 LUT |
+| LUT5     |   75 |                 LUT |
+| OBUF     |   34 |                  IO |
+| OBUFT    |   27 |                  IO |
 | MUXF7    |   26 |               MuxFx |
 | IBUF     |   18 |                  IO |
 | RAMB18E1 |   15 |        Block Memory |
