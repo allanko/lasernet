@@ -89,6 +89,10 @@ module mainfsm(
     reg [31:0] lastACK; 	// last acknowledgment received from other node
     reg [31:0] nextACK; 	// next acknowledgment to send to other node
 
+    // counter for closing connection at the end of FIN_WAIT
+    reg [19:0] finwaitcounter = 0;
+    parameter [19:0] FINWAITMAX = 20'd325000; // equivalent to 5 seconds at 65 mhz
+
     // state behavior
     always @(*) begin
     	case(state)
@@ -230,6 +234,7 @@ module mainfsm(
     		lastACK <= 32'd0;
     		readyout <= 1'b0;
     		FINreceived <= 1'b0;
+            finwaitcounter <= 20'd0;
 
     	end
 
@@ -240,6 +245,7 @@ module mainfsm(
     		lastACK <= 32'd0;
     		readyout <= (nextstate != state) ? 1'b1 : 1'b0; 
     		FINreceived <= 1'b0;
+            finwaitcounter <= 20'd0;
 
     	end
 
@@ -254,6 +260,7 @@ module mainfsm(
     		readyout <= (nextstate != state) ? 1'b1 : 1'b0;
 
     		FINreceived <= 1'b0;
+            finwaitcounter <= 20'd0;
 
     	end
 
@@ -267,6 +274,7 @@ module mainfsm(
     		readyout <= (nextstate != state) ? 1'b1 : 1'b0;
 
     		FINreceived <= 1'b0;
+            finwaitcounter <= 20'd0;
 
     	end
 
@@ -287,6 +295,7 @@ module mainfsm(
     		readyout <= (nextstate != state) ? 1'b1 : 1'b0;
 
     		FINreceived <= ((nextstate != state) & flagsinFIN) ? 1'b1 : FINreceived; // on entry, check if FIN received
+            finwaitcounter <= 20'd0;
 
     	end
 
@@ -297,6 +306,7 @@ module mainfsm(
     		lastACK <= lastACK;
     		readyout <= 1'b0;
     		FINreceived <= FINreceived;
+            finwaitcounter <= 20'd0;
 
     	end
 
@@ -310,6 +320,7 @@ module mainfsm(
 
     		readyout <= (nextstate != state) ? 1'b1 : 1'b0;
     		FINreceived <= ((nextstate != state) & flagsinFIN) ? 1'b1 : FINreceived; // on entry, check if FIN received
+            finwaitcounter <= 20'd0;
 
     	end
 
@@ -320,6 +331,7 @@ module mainfsm(
     		lastACK <= lastACK;
     		readyout <= 1'b0;
     		FINreceived <= FINreceived;
+            finwaitcounter <= (nextstate != state) ? 20'd0 : finwaitcounter + 1;
 
     	end
 
