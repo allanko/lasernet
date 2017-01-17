@@ -30,7 +30,7 @@ module labkit(
    output[3:0] VGA_G,
    output VGA_HS, 
    output VGA_VS, 
-   output[7:0] JA, 
+   inout [7:0] JA, 
    output LED16_B, LED16_G, LED16_R,
    output LED17_B, LED17_G, LED17_R,
    output[15:0] LED,
@@ -101,7 +101,7 @@ debounce db2(.reset(reset),.clock(clocksys),
 
 //////////////////////////// MAIN STATE MACHINE
 
-wire packetsent;            // goes high for a cycle when a packet is sent
+wire packetsent;            // goes high for a cycle when a packet is finished sending
 
 wire incomingready;         // incoming packet is ready
 wire [31:0] incomingACK;    // incoming acknowledgment number
@@ -161,7 +161,7 @@ makepacket packetgen(.clk(clocksys), .reset(reset),
 
 //////////////////////// PACKET RECEIVER AND CHECKSUM
 wire [32*9 - 1 :0] incomingpacket;  // incoming packet received from photodiode
-wire readyfromlaserinput;           // signal ready is high when a new packet is fully received from photodiode
+wire readyfromlaserinput;           // goes high when a new packet is fully received from photodiode
 
 receivepacket packetrcv(.clk(clocksys), .reset(reset),
                           .ready(readyfromlaserinput),
@@ -170,6 +170,36 @@ receivepacket packetrcv(.clk(clocksys), .reset(reset),
                           .seq(incomingSEQ),.ack(incomingACK),.flags(incomingflags),
                           .message(incoming));
 
+//////////////////////// LASER OUTPUT AND PHOTODIODE INPUT
+
+
+wire laser_out;
+wire busy;
+
+assign JA[0] = laser_out;
+assign LED[12] = busy;
+assign LED[13] = laser_out;
+
+serial_tx stx(.clk(clocksys),
+        .rst(reset),
+        .data(outgoingpacket),        // outgoing data packet
+        .new_data(readytotransmit),   // goes high when new packet available to transmit
+        .tx(laser_out),               // laser signal output to JA[0] 
+        .busy(busy),                  // high when transmitting a message, low when not
+        .done(packetsent));           // high for one cycle after completing transmission
+defparam stx.CLK_PER_BIT = 13540;
+defparam stx.PKT_LENGTH = 32*9;  
+
+serial_rx srx(.clk(clocksys),
+        .rst(reset),
+        .rx(~JA[1]),                      // incoming photodiode signal on JA[1]
+        .data(incomingpacket),            // incoming data packet
+        .new_data(readyfromlaserinput));  // high for one cycle when new packet available
+defparam srx.CLK_PER_BIT = 13540;
+defparam srx.PKT_LENGTH = 32*9;
+
+
+////////////////////////// workspace
 
 // display some important numbers to seven-segment display
 assign to_display = {incomingACK[3:0], incomingSEQ[3:0], outgoingACK[3:0], outgoingSEQ[3:0], 12'h000, state};
@@ -177,7 +207,7 @@ assign LED[2:0] = {outgoingflags[4], outgoingflags[1], outgoingflags[0]};
 
 
 // temp statements here - remove this section
-assign packetsent = SW[14]; // simulate a packet being sent
+// assign packetsent = SW[14]; // simulate a packet being sent
 
 // assign incomingflags = {4'b0000, SW[2], 2'b00, SW[1], SW[0]}; // simulate incoming ack, syn, fin
 // assign incomingACK = {28'd0, SW[11:8]};

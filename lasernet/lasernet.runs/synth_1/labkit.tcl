@@ -3,6 +3,7 @@
 # 
 
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7a100tcsg324-3
@@ -33,6 +34,8 @@ read_verilog -library xil_defaultlib {
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/blob.v}
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/screenlayout.v}
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/receivepacket.v}
+  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/serial_rx.v}
+  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/serial_tx.v}
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v}
 }
 read_edif {{C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/font_rom.edn}}

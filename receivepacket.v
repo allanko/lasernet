@@ -64,6 +64,7 @@ module receivepacket(
                  octet2[31:16] + octet2[15:0] + 
                  octet3[31:16] + octet3[15:0] + 
                  octet4[31:16] + octet4[15:0] + 
+                 octet5[31:16] + octet5[15:0] + // notice - including the checksum octet here!
                  octet6[31:16] + octet6[15:0] + 
                  octet7[31:16] + octet7[15:0] +
                  octet8[31:16] + octet8[15:0] + 

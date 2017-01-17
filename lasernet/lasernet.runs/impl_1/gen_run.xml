@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1484620540">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1484628133">
   <File Type="PWROPT-DRC" Name="labkit_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="labkit_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="labkit_timing_summary_init.rpt"/>
@@ -146,6 +146,20 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../receivepacket.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../serial_rx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../serial_tx.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

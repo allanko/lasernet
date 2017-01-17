@@ -91,7 +91,7 @@ module makepacket(
                  octet2[31:16] + octet2[15:0] + 
                  octet3[31:16] + octet3[15:0] + 
                  octet4[31:16] + octet4[15:0] + 
-                 octet6[31:16] + octet6[15:0] + 
+                 octet6[31:16] + octet6[15:0] +  // skip octet 5 because that's where the checksum goes
                  octet7[31:16] + octet7[15:0] +
                  octet8[31:16] + octet8[15:0] + 
                  octet9[31:16] + octet9[15:0];
