@@ -189,7 +189,7 @@ serial_tx stx(.clk(clocksys),
         .tx(laser_out),               // laser signal output to JA[0] 
         .busy(busy),                  // high when transmitting a message, low when not
         .done(packetsent));           // high for one cycle after completing transmission
-defparam stx.CLK_PER_BIT = 13540;
+defparam stx.CLK_PER_BIT = 54166; //1350 for 4800 baud rate, 54166 for 1200 baud rate
 defparam stx.PKT_LENGTH = 32*9;  
 
 serial_rx srx(.clk(clocksys),
@@ -197,7 +197,7 @@ serial_rx srx(.clk(clocksys),
         .rx(JA[1]),                      // incoming photodiode signal on JA[1]
         .data(incomingpacket),            // incoming data packet
         .new_data(readyfromlaserinput));  // high for one cycle when new packet available
-defparam srx.CLK_PER_BIT = 13540;
+defparam srx.CLK_PER_BIT = 54166; //1350 for 4800 baud rate, 54166 for 1200 baud rate
 defparam srx.PKT_LENGTH = 32*9;
 
 
