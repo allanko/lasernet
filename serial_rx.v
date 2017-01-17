@@ -19,7 +19,7 @@ module serial_rx
     WAIT_HIGH = 2'd3;
    
   reg [CTR_SIZE-1:0] ctr_d, ctr_q;
-  reg [13:0] bit_ctr_d, bit_ctr_q;
+  reg [23:0] bit_ctr_d, bit_ctr_q;
   reg [PKT_LENGTH-1:0] data_d, data_q;
   reg new_data_d, new_data_q;
   reg [STATE_SIZE-1:0] state_d, state_q = IDLE;
@@ -38,7 +38,7 @@ module serial_rx
      
     case (state_q)
       IDLE: begin
-        bit_ctr_d = 14'b0;
+        bit_ctr_d = 24'b0;
         ctr_d = 1'b0;
         if (rx_q == 1'b1) begin
           state_d = WAIT_HALF;
@@ -80,7 +80,7 @@ module serial_rx
   always @(posedge clk) begin
     if (rst) begin
       ctr_q <= 1'b0;
-      bit_ctr_q <= 14'b0;
+      bit_ctr_q <= 24'b0;
       new_data_q <= 1'b0;
       state_q <= IDLE;
 
