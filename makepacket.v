@@ -104,8 +104,8 @@ module makepacket(
 
     // STATE MACHINE
 
-    parameter WAIT = 2'd0; // idle
-    parameter MAKE = 2'd1; // make and transmit packet
+    parameter WAIT = 2'b0; // idle
+    parameter MAKE = 2'b1; // make and transmit packet
     reg [1:0] state;
 
     always @(posedge clk) begin

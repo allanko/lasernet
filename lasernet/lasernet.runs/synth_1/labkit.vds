@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Mon Jan 16 17:05:56 2017
-# Process ID: 5236
+# Start of session at: Mon Jan 16 21:34:08 2017
+# Process ID: 204
 # Current directory: C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1
 # Command line: vivado.exe -log labkit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source labkit.tcl
 # Log file: C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/labkit.vds
@@ -15,13 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12848 
+INFO: Helper process launched with PID 9708 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 278.410 ; gain = 68.816
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 278.238 ; gain = 68.648
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'labkit' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:22]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5236-allanko/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5236-allanko/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-204-allanko/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-204-allanko/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-638] synthesizing module 'display_8hex' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/display_8hex.v:16]
 	Parameter bits bound to: 13 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'display_8hex' (2#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/display_8hex.v:16]
@@ -55,69 +55,77 @@ INFO: [Synth 8-638] synthesizing module 'makepacket' [C:/Users/Allan/Documents/M
 	Parameter WAIT bound to: 2'b00 
 	Parameter MAKE bound to: 2'b01 
 INFO: [Synth 8-256] done synthesizing module 'makepacket' (9#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/makepacket.v:30]
+INFO: [Synth 8-638] synthesizing module 'receivepacket' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/receivepacket.v:25]
+	Parameter HOLD bound to: 2'b00 
+	Parameter UPDATE_OOO bound to: 2'b01 
+	Parameter UPDATE_ALL bound to: 2'b10 
+	Parameter RESET bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/receivepacket.v:108]
+INFO: [Synth 8-256] done synthesizing module 'receivepacket' (10#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/receivepacket.v:25]
+WARNING: [Synth 8-689] width (32) of port connection 'ISN' does not match port width (1) of module 'receivepacket' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:168]
 INFO: [Synth 8-638] synthesizing module 'xvga' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/xvga.v:24]
-INFO: [Synth 8-256] done synthesizing module 'xvga' (10#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/xvga.v:24]
+INFO: [Synth 8-256] done synthesizing module 'xvga' (11#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/xvga.v:24]
 INFO: [Synth 8-638] synthesizing module 'screenlayout' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/screenlayout.v:25]
 INFO: [Synth 8-638] synthesizing module 'char_string_display' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 8 - type: integer 
 	Parameter NCHAR_BITS bound to: 4 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/font_rom.v:40]
-INFO: [Synth 8-256] done synthesizing module 'font_rom' (11#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/font_rom.v:40]
-INFO: [Synth 8-256] done synthesizing module 'char_string_display' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/font_rom.v:40]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized0' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 11 - type: integer 
 	Parameter NCHAR_BITS bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized0' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized0' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized1' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized1' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized1' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized2' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized2' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized2' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized3' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized3' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized3' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized4' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized4' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized4' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized5' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized5' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized5' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized6' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized6' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized6' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized7' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized7' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized7' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized8' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized8' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized8' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized9' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized9' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized9' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized10' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized10' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized10' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 INFO: [Synth 8-638] synthesizing module 'char_string_display__parameterized11' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
 	Parameter NCHAR bound to: 16 - type: integer 
 	Parameter NCHAR_BITS bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized11' (12#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
-INFO: [Synth 8-256] done synthesizing module 'screenlayout' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/screenlayout.v:25]
+INFO: [Synth 8-256] done synthesizing module 'char_string_display__parameterized11' (13#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/cstringdisp.v:44]
+INFO: [Synth 8-256] done synthesizing module 'screenlayout' (14#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/screenlayout.v:25]
 INFO: [Synth 8-638] synthesizing module 'blob' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/blob.v:1]
 	Parameter WIDTH bound to: 800 - type: integer 
 	Parameter HEIGHT bound to: 128 - type: integer 
 	Parameter COLOR bound to: 24'b111111110000000000000000 
-INFO: [Synth 8-256] done synthesizing module 'blob' (14#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/blob.v:1]
+INFO: [Synth 8-256] done synthesizing module 'blob' (15#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/blob.v:1]
 WARNING: [Synth 8-3848] Net UART_RXD_OUT in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:27]
 WARNING: [Synth 8-3848] Net JA in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:33]
 WARNING: [Synth 8-3848] Net LED16_B in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:34]
@@ -126,11 +134,45 @@ WARNING: [Synth 8-3848] Net LED16_R in module/entity labkit does not have driver
 WARNING: [Synth 8-3848] Net LED17_B in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:35]
 WARNING: [Synth 8-3848] Net LED17_G in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:35]
 WARNING: [Synth 8-3848] Net LED17_R in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:35]
-WARNING: [Synth 8-3848] Net dis in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:202]
+WARNING: [Synth 8-3848] Net dis in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:197]
 WARNING: [Synth 8-3848] Net incomingready in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:106]
-INFO: [Synth 8-256] done synthesizing module 'labkit' (15#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:22]
+WARNING: [Synth 8-3848] Net readyfromlaserinput in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:164]
+WARNING: [Synth 8-3848] Net incomingpacket in module/entity labkit does not have driver. [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:163]
+INFO: [Synth 8-256] done synthesizing module 'labkit' (16#1) [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:22]
 WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
 WARNING: [Synth 8-3331] design screenlayout has unconnected port display
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[159]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[158]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[157]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[156]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[155]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[154]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[153]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[152]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[151]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[150]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[149]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[148]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[147]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[146]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[145]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[144]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[143]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[142]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[141]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[140]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[139]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[138]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[137]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[136]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[135]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[134]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[133]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[132]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[131]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[130]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[129]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[128]
 WARNING: [Synth 8-3331] design mainfsm has unconnected port readyin
 WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[8]
 WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[7]
@@ -153,6 +195,7 @@ WARNING: [Synth 8-3331] design labkit has unconnected port LED16_R
 WARNING: [Synth 8-3331] design labkit has unconnected port LED17_B
 WARNING: [Synth 8-3331] design labkit has unconnected port LED17_G
 WARNING: [Synth 8-3331] design labkit has unconnected port LED17_R
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[15]
 WARNING: [Synth 8-3331] design labkit has unconnected port LED[14]
 WARNING: [Synth 8-3331] design labkit has unconnected port LED[13]
 WARNING: [Synth 8-3331] design labkit has unconnected port LED[12]
@@ -166,12 +209,23 @@ WARNING: [Synth 8-3331] design labkit has unconnected port LED[5]
 WARNING: [Synth 8-3331] design labkit has unconnected port LED[4]
 WARNING: [Synth 8-3331] design labkit has unconnected port LED[3]
 WARNING: [Synth 8-3331] design labkit has unconnected port SW[12]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[11]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[10]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[9]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[8]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[4]
 WARNING: [Synth 8-3331] design labkit has unconnected port SW[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[1]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[0]
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNU
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNR
 WARNING: [Synth 8-3331] design labkit has unconnected port BTND
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 320.371 ; gain = 110.777
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 321.238 ; gain = 111.648
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -180,8 +234,109 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:ready to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[287] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[286] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[285] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[284] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[283] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[282] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[281] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[280] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[279] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[278] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[277] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[276] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[275] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[274] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[273] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[272] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[271] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[270] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[269] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[268] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[267] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[266] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[265] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[264] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[263] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[262] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[261] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[260] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[259] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[258] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[257] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[256] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[255] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[254] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[253] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[252] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[251] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[250] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[249] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[248] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[247] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[246] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[245] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[244] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[243] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[242] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[241] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[240] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[239] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[238] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[237] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[236] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[235] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[234] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[233] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[232] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[231] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[230] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[229] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[228] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[227] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[226] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[225] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[224] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[223] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[222] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[221] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[220] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[219] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[218] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[217] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[216] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[215] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[214] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[213] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[212] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[211] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[210] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[209] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[208] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[207] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[206] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[205] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[204] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[203] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[202] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[201] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[200] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[199] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[198] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[197] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[196] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[195] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[194] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[193] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[192] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[191] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[190] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+WARNING: [Synth 8-3295] tying undriven pin packetrcv:packet[189] to constant 0 [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v:166]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 320.371 ; gain = 110.777
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 321.238 ; gain = 111.648
 ---------------------------------------------------------------------------------
 WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
@@ -216,8 +371,8 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5236-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
-Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5236-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
+Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-204-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
+Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-204-allanko/dcp/clk_wiz_0_in_context.xdc] for cell 'clock65'
 Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]
 Finished Parsing XDC File [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/Nexys4DDR_Master_lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/labkit_propImpl.xdc].
@@ -227,24 +382,24 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 645.117 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 648.055 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 645.117 ; gain = 435.523
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 648.055 ; gain = 438.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 645.117 ; gain = 435.523
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 648.055 ; gain = 438.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5236-allanko/dcp/clk_wiz_0_in_context.xdc}, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-5236-allanko/dcp/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-204-allanko/dcp/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/.Xil/Vivado-204-allanko/dcp/clk_wiz_0_in_context.xdc}, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 645.117 ; gain = 435.523
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 648.055 ; gain = 438.465
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clean" won't be mapped to RAM because it is too sparse
@@ -275,6 +430,11 @@ INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address
 INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cstring0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "messageoutarray0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "messagepart10" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "messagepart20" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "messagepart30" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "messagepart40" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "messagepart50" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -295,7 +455,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'flagsoutSYN_reg' [C:/Users/
 WARNING: [Synth 8-327] inferring latch for variable 'flagsoutACK_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:60]
 WARNING: [Synth 8-327] inferring latch for variable 'statedisplay_reg' [C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/mainfsm.v:97]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 645.117 ; gain = 435.523
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 648.055 ; gain = 438.465
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -308,10 +468,11 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 9     
-	   3 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 10    
+	   3 Input     32 Bit       Adders := 3     
+	  16 Input     31 Bit       Adders := 1     
 	  14 Input     28 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 4     
 	   3 Input     13 Bit       Adders := 1     
 	   2 Input     12 Bit       Adders := 14    
 	   3 Input     12 Bit       Adders := 15    
@@ -328,26 +489,29 @@ Detailed RTL Component Info :
 	                9 Bit    Wide XORs := 1     
 +---Registers : 
 	              288 Bit    Registers := 1     
-	              128 Bit    Registers := 6     
-	               32 Bit    Registers := 3     
+	              128 Bit    Registers := 11    
+	               32 Bit    Registers := 6     
 	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 6     
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 3     
-	                2 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 22    
 +---RAMs : 
 	               64 Bit         RAMs := 1     
 +---ROMs : 
 	                              ROMs := 1     
 +---Muxes : 
-	   4 Input    128 Bit        Muxes := 1     
+	   4 Input    128 Bit        Muxes := 2     
 	   2 Input    128 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 5     
 	   8 Input     32 Bit        Muxes := 4     
-	   2 Input     16 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input      9 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 16    
 	   2 Input      4 Bit        Muxes := 15    
@@ -358,9 +522,11 @@ Detailed RTL Component Info :
 	   4 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 4     
 	   5 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 41    
 	   8 Input      1 Bit        Muxes := 7     
-	   4 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 5     
 	  16 Input      1 Bit        Muxes := 16    
 	  32 Input      1 Bit        Muxes := 80    
 ---------------------------------------------------------------------------------
@@ -469,6 +635,26 @@ Detailed RTL Component Info :
 	   2 Input    128 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
+Module receivepacket 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	  16 Input     31 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	              128 Bit    Registers := 5     
+	               32 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    128 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input      9 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 5     
 Module xvga 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -689,153 +875,139 @@ INFO: [Synth 8-5546] ROM "db2/count" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "db2/clean" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
 WARNING: [Synth 8-3331] design screenlayout has unconnected port display
-WARNING: [Synth 8-3331] design mainfsm has unconnected port readyin
-WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[8]
-WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[7]
-WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[6]
-WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[5]
-WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[3]
-WARNING: [Synth 8-3331] design mainfsm has unconnected port flagsin[2]
-WARNING: [Synth 8-3331] design labkit has unconnected port UART_RXD_OUT
-WARNING: [Synth 8-3331] design labkit has unconnected port JA[7]
-WARNING: [Synth 8-3331] design labkit has unconnected port JA[6]
-WARNING: [Synth 8-3331] design labkit has unconnected port JA[5]
-WARNING: [Synth 8-3331] design labkit has unconnected port JA[4]
-WARNING: [Synth 8-3331] design labkit has unconnected port JA[3]
-WARNING: [Synth 8-3331] design labkit has unconnected port JA[2]
-WARNING: [Synth 8-3331] design labkit has unconnected port JA[1]
-WARNING: [Synth 8-3331] design labkit has unconnected port JA[0]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED16_B
-WARNING: [Synth 8-3331] design labkit has unconnected port LED16_G
-WARNING: [Synth 8-3331] design labkit has unconnected port LED16_R
-WARNING: [Synth 8-3331] design labkit has unconnected port LED17_B
-WARNING: [Synth 8-3331] design labkit has unconnected port LED17_G
-WARNING: [Synth 8-3331] design labkit has unconnected port LED17_R
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[14]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[13]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[12]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[11]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[10]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[9]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[8]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[7]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[6]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[5]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[4]
-WARNING: [Synth 8-3331] design labkit has unconnected port LED[3]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[12]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[3]
-WARNING: [Synth 8-3331] design labkit has unconnected port BTNU
-WARNING: [Synth 8-3331] design labkit has unconnected port BTNR
-WARNING: [Synth 8-3331] design labkit has unconnected port BTND
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[4]' (FDE) to 'statemachine/lastACK_reg[5]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[5]' (FDE) to 'statemachine/lastACK_reg[6]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[6]' (FDE) to 'statemachine/lastACK_reg[7]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[7]' (FDE) to 'statemachine/lastACK_reg[8]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[8]' (FDE) to 'statemachine/lastACK_reg[9]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[9]' (FDE) to 'statemachine/lastACK_reg[10]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[10]' (FDE) to 'statemachine/lastACK_reg[11]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[11]' (FDE) to 'statemachine/lastACK_reg[12]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[12]' (FDE) to 'statemachine/lastACK_reg[13]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[13]' (FDE) to 'statemachine/lastACK_reg[14]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[14]' (FDE) to 'statemachine/lastACK_reg[15]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[15]' (FDE) to 'statemachine/lastACK_reg[16]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[16]' (FDE) to 'statemachine/lastACK_reg[17]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[17]' (FDE) to 'statemachine/lastACK_reg[18]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[18]' (FDE) to 'statemachine/lastACK_reg[19]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[19]' (FDE) to 'statemachine/lastACK_reg[20]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[20]' (FDE) to 'statemachine/lastACK_reg[21]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[21]' (FDE) to 'statemachine/lastACK_reg[22]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[22]' (FDE) to 'statemachine/lastACK_reg[23]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[23]' (FDE) to 'statemachine/lastACK_reg[24]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[24]' (FDE) to 'statemachine/lastACK_reg[25]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[25]' (FDE) to 'statemachine/lastACK_reg[26]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[26]' (FDE) to 'statemachine/lastACK_reg[27]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[27]' (FDE) to 'statemachine/lastACK_reg[28]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[28]' (FDE) to 'statemachine/lastACK_reg[29]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[29]' (FDE) to 'statemachine/lastACK_reg[30]'
-INFO: [Synth 8-3886] merging instance 'statemachine/lastACK_reg[30]' (FDE) to 'statemachine/lastACK_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (statemachine/\lastACK_reg[31] )
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[159]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[158]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[157]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[156]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[155]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[154]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[153]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[152]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[151]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[150]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[149]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[148]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[147]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[146]
+WARNING: [Synth 8-3331] design receivepacket has unconnected port packet[145]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'packetrcv/flags_reg[0]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/flags_reg[1]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[4]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[5]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[6]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[7]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[8]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[9]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[10]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[11]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[12]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[13]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[14]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[15]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[16]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[17]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[18]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[19]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[20]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[21]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[22]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[23]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[24]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[25]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[26]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[27]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[28]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[29]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[30]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/ack_reg[31]' (FDE) to 'packetrcv/ack_reg[0]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/flags_reg[4]' (FDE) to 'packetrcv/ack_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\kbd/ascii_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (statemachine/\statedisplay_reg[3] )
-INFO: [Synth 8-3886] merging instance 'rgb_reg[1]' (FD) to 'rgb_reg[0]'
-INFO: [Synth 8-3886] merging instance 'rgb_reg[0]' (FD) to 'rgb_reg[2]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[7]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[71]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[39]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[103]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[23]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[87]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[55]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[119]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[15]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[79]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[47]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[111]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[31]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[95]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray1_reg[63]' (FDE) to 'kbdexport1/messageoutarray1_reg[127]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray1_reg[127] )
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[7]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[71]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[39]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[103]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[23]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[87]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[55]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[119]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[15]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[79]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[47]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[111]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[31]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[95]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray0_reg[63]' (FDE) to 'kbdexport1/messageoutarray0_reg[127]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray0_reg[127] )
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[7]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[71]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[39]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[103]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[23]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[87]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[55]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[119]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[15]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[79]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[47]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[111]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[31]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[95]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray2_reg[63]' (FDE) to 'kbdexport1/messageoutarray2_reg[127]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray2_reg[127] )
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[7]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[71]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[39]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[103]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[23]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[87]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[55]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[119]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[15]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[79]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[47]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[111]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[31]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[95]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray4_reg[63]' (FDE) to 'kbdexport1/messageoutarray4_reg[127]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray4_reg[127] )
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[7]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[71]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[39]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[103]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[23]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[87]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[55]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[119]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[15]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[79]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
-INFO: [Synth 8-3886] merging instance 'kbdexport1/messageoutarray3_reg[47]' (FDE) to 'kbdexport1/messageoutarray3_reg[127]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[0]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[1]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[2]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[3]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[4]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[5]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[6]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[7]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[8]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[9]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[10]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[11]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[12]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[13]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[14]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[15]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[16]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[17]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[18]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[19]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[20]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[21]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[22]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[23]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[24]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[25]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[26]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[27]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[28]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[29]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/highestSNreceived_reg[30]' (FDE) to 'packetrcv/highestSNreceived_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (packetrcv/\highestSNreceived_reg[31] )
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[0]' (FDE) to 'packetrcv/messagepart1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[64]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[32]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[96]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[16]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[80]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[48]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[112]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[8]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[72]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[40]' (FDE) to 'packetrcv/messagepart1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[104]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[24]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[88]' (FDE) to 'packetrcv/messagepart1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[56]' (FDE) to 'packetrcv/messagepart1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[120]' (FDE) to 'packetrcv/messagepart1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[1]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[65]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[33]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[97]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[17]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[81]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[49]' (FDE) to 'packetrcv/messagepart1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[113]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[9]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[73]' (FDE) to 'packetrcv/messagepart1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[41]' (FDE) to 'packetrcv/messagepart1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[105]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[25]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[89]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[57]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[121]' (FDE) to 'packetrcv/messagepart1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[2]' (FDE) to 'packetrcv/messagepart1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[66]' (FDE) to 'packetrcv/messagepart1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[34]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[98]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[18]' (FDE) to 'packetrcv/messagepart1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'packetrcv/messagepart1_reg[82]' (FDE) to 'packetrcv/messagepart1_reg[5]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (statemachine/\statedisplay_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (packetrcv/\ack_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (packetrcv/\messagepart1_reg[127] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (packetrcv/\messagepart2_reg[127] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (packetrcv/\messagepart3_reg[127] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (packetrcv/\messagepart4_reg[127] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (packetrcv/\messagepart5_reg[127] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (statemachine/FINreceived_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (statemachine/\lastACK_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (statemachine/\nextACK_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray1_reg[127] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray0_reg[127] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray2_reg[127] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray4_reg[127] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (kbdexport1/\messageoutarray3_reg[127] )
 WARNING: [Synth 8-3332] Sequential element (ACKout_reg[31]) is unused and will be removed from module mainfsm.
 WARNING: [Synth 8-3332] Sequential element (ACKout_reg[30]) is unused and will be removed from module mainfsm.
@@ -909,6 +1081,7 @@ WARNING: [Synth 8-3332] Sequential element (statedisplay_reg[2]) is unused and w
 WARNING: [Synth 8-3332] Sequential element (statedisplay_reg[1]) is unused and will be removed from module mainfsm.
 WARNING: [Synth 8-3332] Sequential element (statedisplay_reg[0]) is unused and will be removed from module mainfsm.
 WARNING: [Synth 8-3332] Sequential element (lastACK_reg[31]) is unused and will be removed from module mainfsm.
+WARNING: [Synth 8-3332] Sequential element (FINreceived_reg) is unused and will be removed from module mainfsm.
 WARNING: [Synth 8-3332] Sequential element (nextACK_reg[31]) is unused and will be removed from module mainfsm.
 WARNING: [Synth 8-3332] Sequential element (nextACK_reg[30]) is unused and will be removed from module mainfsm.
 WARNING: [Synth 8-3332] Sequential element (nextACK_reg[29]) is unused and will be removed from module mainfsm.
@@ -936,10 +1109,9 @@ WARNING: [Synth 8-3332] Sequential element (nextACK_reg[8]) is unused and will b
 WARNING: [Synth 8-3332] Sequential element (nextACK_reg[7]) is unused and will be removed from module mainfsm.
 WARNING: [Synth 8-3332] Sequential element (nextACK_reg[6]) is unused and will be removed from module mainfsm.
 WARNING: [Synth 8-3332] Sequential element (nextACK_reg[5]) is unused and will be removed from module mainfsm.
-WARNING: [Synth 8-3332] Sequential element (nextACK_reg[4]) is unused and will be removed from module mainfsm.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 645.117 ; gain = 435.523
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 648.055 ; gain = 438.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -980,10 +1152,10 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clock65/clk_out_65mhz' to pin 'clock65/bbstub_clk_out_65mhz/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:07 . Memory (MB): peak = 645.117 ; gain = 435.523
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:59 . Memory (MB): peak = 648.055 ; gain = 438.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:15 . Memory (MB): peak = 682.316 ; gain = 472.723
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 677.605 ; gain = 468.016
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -995,7 +1167,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:17 . Memory (MB): peak = 682.316 ; gain = 472.723
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 677.605 ; gain = 468.016
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1019,7 +1191,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:19 . Memory (MB): peak = 682.316 ; gain = 472.723
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 677.605 ; gain = 468.016
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1032,7 +1204,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:19 . Memory (MB): peak = 682.316 ; gain = 472.723
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 677.605 ; gain = 468.016
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1044,25 +1216,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:19 . Memory (MB): peak = 682.316 ; gain = 472.723
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 677.605 ; gain = 468.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:19 . Memory (MB): peak = 682.316 ; gain = 472.723
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 677.605 ; gain = 468.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:19 . Memory (MB): peak = 682.316 ; gain = 472.723
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 677.605 ; gain = 468.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:19 . Memory (MB): peak = 682.316 ; gain = 472.723
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 677.605 ; gain = 468.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1095,63 +1267,63 @@ Report Cell Usage:
 |13    |font_rom__7  |     1|
 |14    |font_rom__8  |     1|
 |15    |font_rom__9  |     1|
-|16    |CARRY4       |   249|
-|17    |LUT1         |   445|
-|18    |LUT2         |   403|
-|19    |LUT3         |    83|
-|20    |LUT4         |   181|
-|21    |LUT5         |    75|
-|22    |LUT6         |   346|
-|23    |MUXF7        |    26|
-|24    |MUXF8        |     9|
+|16    |CARRY4       |   242|
+|17    |LUT1         |   440|
+|18    |LUT2         |   398|
+|19    |LUT3         |    79|
+|20    |LUT4         |    80|
+|21    |LUT5         |   138|
+|22    |LUT6         |   344|
+|23    |MUXF7        |    43|
+|24    |MUXF8        |    16|
 |25    |RAM32M       |     2|
 |26    |RAMB18E1     |     1|
 |27    |XORCY        |     9|
-|28    |FDRE         |   671|
+|28    |FDRE         |   663|
 |29    |FDSE         |   194|
-|30    |IBUF         |    18|
-|31    |OBUF         |    34|
-|32    |OBUFT        |    27|
+|30    |IBUF         |     7|
+|31    |OBUF         |    33|
+|32    |OBUFT        |    28|
 +------+-------------+------+
 
 Report Instance Areas: 
 +------+----------------+-------------------------------------+------+
 |      |Instance        |Module                               |Cells |
 +------+----------------+-------------------------------------+------+
-|1     |top             |                                     |  2887|
+|1     |top             |                                     |  2831|
 |2     |  db1           |debounce                             |    54|
 |3     |  db2           |debounce_0                           |    54|
-|4     |  display       |display_8hex                         |    78|
-|5     |  face          |screenlayout                         |   484|
+|4     |  display       |display_8hex                         |    55|
+|5     |  face          |screenlayout                         |   406|
 |6     |    cd          |char_string_display__parameterized11 |    29|
-|7     |    cd_in1      |char_string_display__parameterized6  |    47|
-|8     |    cd_in2      |char_string_display__parameterized7  |    47|
-|9     |    cd_in3      |char_string_display__parameterized8  |    47|
-|10    |    cd_in4      |char_string_display__parameterized9  |    47|
-|11    |    cd_in5      |char_string_display__parameterized10 |    43|
+|7     |    cd_in1      |char_string_display__parameterized6  |    31|
+|8     |    cd_in2      |char_string_display__parameterized7  |    31|
+|9     |    cd_in3      |char_string_display__parameterized8  |    31|
+|10    |    cd_in4      |char_string_display__parameterized9  |    32|
+|11    |    cd_in5      |char_string_display__parameterized10 |    29|
 |12    |    cd_incoming |char_string_display                  |    11|
-|13    |    cd_input    |char_string_display__parameterized0  |    46|
+|13    |    cd_input    |char_string_display__parameterized0  |    45|
 |14    |    cd_out1     |char_string_display__parameterized1  |    31|
 |15    |    cd_out2     |char_string_display__parameterized2  |    31|
 |16    |    cd_out3     |char_string_display__parameterized3  |    31|
-|17    |    cd_out4     |char_string_display__parameterized4  |    31|
+|17    |    cd_out4     |char_string_display__parameterized4  |    32|
 |18    |    cd_out5     |char_string_display__parameterized5  |    32|
-|19    |    cd_outgoing |char_string_display_2                |    11|
-|20    |  kbdexport1    |keyboardexport                       |  1069|
+|19    |    cd_outgoing |char_string_display_2                |    10|
+|20    |  kbdexport1    |keyboardexport                       |  1087|
 |21    |    kbd         |ps2_ascii_input                      |    52|
 |22    |      myps2     |ps2                                  |    46|
-|23    |  packetgen     |makepacket                           |     2|
-|24    |  s1            |synchronize                          |     5|
+|23    |  packetrcv     |receivepacket                        |    84|
+|24    |  s1            |synchronize                          |     4|
 |25    |  s2            |synchronize_1                        |     2|
-|26    |  statemachine  |mainfsm                              |   207|
-|27    |  xvga1         |xvga                                 |   832|
+|26    |  statemachine  |mainfsm                              |   173|
+|27    |  xvga1         |xvga                                 |   836|
 +------+----------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:19 . Memory (MB): peak = 682.316 ; gain = 472.723
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 677.605 ; gain = 468.016
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 476 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 682.316 ; gain = 147.977
-Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:19 . Memory (MB): peak = 682.316 ; gain = 472.723
+Synthesis finished with 0 errors, 0 critical warnings and 566 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 677.605 ; gain = 141.199
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 677.605 ; gain = 468.016
 INFO: [Project 1-571] Translating synthesized netlist
 WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
@@ -1183,7 +1355,7 @@ WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
 WARNING: [Synth 37-28] Duplicate attribute 'fpga_dont_touch' found for instance 'f' of module 'font_rom'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
-INFO: [Netlist 29-17] Analyzing 293 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 275 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Xilinx CORE Generator Xilinx CORE Generator 7.1.03i
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1195,9 +1367,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAMB16_S9 => RAMB18E1: 14 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-241 Infos, 227 Warnings, 0 Critical Warnings and 0 Errors encountered.
+261 Infos, 350 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:13 . Memory (MB): peak = 682.316 ; gain = 472.723
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 677.605 ; gain = 468.016
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/labkit.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.126 . Memory (MB): peak = 682.316 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 16 17:07:20 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 677.605 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 16 21:35:21 2017...

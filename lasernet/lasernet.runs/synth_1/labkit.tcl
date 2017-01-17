@@ -32,6 +32,7 @@ read_verilog -library xil_defaultlib {
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/xvga.v}
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/blob.v}
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/screenlayout.v}
+  {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/receivepacket.v}
   {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/nexys-wrapper.v}
 }
 read_edif {{C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/cstring/font_rom.edn}}

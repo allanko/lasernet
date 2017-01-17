@@ -118,10 +118,11 @@ wire [3:0] state;           // to display the current state
 wire [31:0] ISN;            // first sequence number to use
 assign ISN = 32'd0;         // PARAMETER
 
-wire [31:0] SNmax;          // largest sequence number available in data
+wire [31:0] SNmax;          // largest sequence number available in data; equal to # of packets in message
+assign SNmax = 32'h5;       // PARAMETER
 
 wire [15:0] windowsize;     // window size for go-back-n protocol
-assign windowsize = 16'd3;  // PARAMETER
+assign windowsize = 16'd2;  // PARAMETER
 
 mainfsm statemachine(.clk(clocksys), .reset(reset), .open(openTCP), .packetsent(packetsent),
                       .ISN(ISN), .SNmax(SNmax),
@@ -130,29 +131,16 @@ mainfsm statemachine(.clk(clocksys), .reset(reset), .open(openTCP), .packetsent(
                       .readyout(outgoingready), .ACKout(outgoingACK), .SEQout(outgoingSEQ), .flagsout(outgoingflags),
                       .statedisplay(state));
 
-///////////////////////////// MESSAGE STORAGE 
-
-//// create memory blocks for holding incoming and outgoing messages
+//// memory blocks for holding incoming and outgoing messages
 //// each packet is 16 characters, can store/display 5 packets at a time
 
-// array form
-wire [16*8 - 1:0] incomingarray[4:0]; 
-
-// bus form
-wire [16*8*5 - 1 : 0] outgoing;
-wire [16*8*5 - 1 : 0] incoming;
-assign incoming = {incomingarray[4], incomingarray[3], incomingarray[2], incomingarray[1], incomingarray[0]};
-
-// temp statements here - remove this section
-assign incomingarray[0] = "[     blank    ]";
-assign incomingarray[1] = "[     blank    ]";
-assign incomingarray[2] = "[     blank    ]";
-assign incomingarray[3] = "[     blank    ]";
-assign incomingarray[4] = "[     blank    ]";
+wire [16*8*5 - 1 : 0] outgoing; // outgoing message
+wire [16*8*5 - 1 : 0] incoming; // incoming message
 
 /////////////////////////// KEYBOARD INPUT
 
 wire [16*8 - 1 : 0] currentkeyboard;
+
 keyboardexport kbdexport1(.clock_65mhz(clock_65mhz), .reset(reset),
                           .ps2_clock(PS2_CLK), .ps2_data(PS2_DATA),
                           .cstring(currentkeyboard),
@@ -171,6 +159,16 @@ makepacket packetgen(.clk(clocksys), .reset(reset),
                       .message(outgoing),
                       .packet(outgoingpacket),.readyout(readytotransmit));
 
+//////////////////////// PACKET RECEIVER AND CHECKSUM
+wire [32*9 - 1 :0] incomingpacket;  // incoming packet received from photodiode
+wire readyfromlaserinput;           // signal ready is high when a new packet is fully received from photodiode
+
+receivepacket packetrcv(.clk(clocksys), .reset(reset),
+                          .ready(readyfromlaserinput),
+                          .ISN(ISN),
+                          .packet(incomingpacket),
+                          .seq(incomingSEQ),.ack(incomingACK),.flags(incomingflags),
+                          .message(incoming));
 
 
 // display some important numbers to seven-segment display
@@ -181,11 +179,10 @@ assign LED[2:0] = {outgoingflags[4], outgoingflags[1], outgoingflags[0]};
 // temp statements here - remove this section
 assign packetsent = SW[14]; // simulate a packet being sent
 
-assign incomingflags = {4'b0000, SW[2], 2'b00, SW[1], SW[0]}; // simulate incoming ack, syn, fin
-assign incomingACK = {28'd0, SW[11:8]};
-assign incomingSEQ = {28'd0, SW[7:4]};
+// assign incomingflags = {4'b0000, SW[2], 2'b00, SW[1], SW[0]}; // simulate incoming ack, syn, fin
+// assign incomingACK = {28'd0, SW[11:8]};
+// assign incomingSEQ = {28'd0, SW[7:4]};
 
-assign SNmax = 32'hA; // set SNmax to 10
 
 
 ///////////////////////////  XVGA DISPLAY ////////////////////////////////////////
