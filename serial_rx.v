@@ -83,15 +83,21 @@ module serial_rx
       bit_ctr_q <= 14'b0;
       new_data_q <= 1'b0;
       state_q <= IDLE;
+
+      rx_q <= 0;
+      data_q <= 0;
+      
     end else begin
       ctr_q <= ctr_d;
       bit_ctr_q <= bit_ctr_d;
       new_data_q <= new_data_d;
       state_q <= state_d;
+
+      rx_q <= rx_d;
+      data_q <= data_d;
     end
      
-    rx_q <= rx_d;
-    data_q <= data_d;
+
   end
    
 endmodule

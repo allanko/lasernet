@@ -109,16 +109,25 @@ module serial_tx
         if (rst) begin
           state_q <= IDLE;
           tx_q <= 1'b0;
+
+          data_q <= 0;
+          bit_ctr_q <= 0;
+          ctr_q <= 0;
+          busy_q <= 0;
+          done_q <= 0;
+          
         end else begin
           state_q <= state_d;
           tx_q <= tx_d;
+
+          data_q <= data_d;
+          bit_ctr_q <= bit_ctr_d;
+          ctr_q <= ctr_d;
+          busy_q <= busy_d;
+          done_q <= done_d;
         end
         
-        data_q <= data_d;
-        bit_ctr_q <= bit_ctr_d;
-        ctr_q <= ctr_d;
-        busy_q <= busy_d;
-        done_q <= done_d;
+
     end
     
 endmodule

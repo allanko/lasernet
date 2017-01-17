@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date             : Tue Jan 17 02:14:30 2017
+| Date             : Tue Jan 17 02:39:24 2017
 | Host             : allanko running 64-bit major release  (build 9200)
 | Command          : report_power -file labkit_power_routed.rpt -pb labkit_power_summary_routed.pb -rpx labkit_power_routed.rpx
 | Design           : labkit
@@ -49,15 +49,15 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.005 |        8 |       --- |             --- |
-| Slice Logic              |     0.004 |     5561 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     2142 |     63400 |            3.38 |
+| Clocks                   |     0.004 |        8 |       --- |             --- |
+| Slice Logic              |     0.004 |     5587 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     2153 |     63400 |            3.40 |
 |   CARRY4                 |    <0.001 |      418 |     15850 |            2.64 |
-|   Register               |    <0.001 |     2416 |    126800 |            1.91 |
-|   F7/F8 Muxes            |    <0.001 |       65 |     63400 |            0.10 |
+|   Register               |    <0.001 |     2417 |    126800 |            1.91 |
+|   F7/F8 Muxes            |    <0.001 |       66 |     63400 |            0.10 |
 |   LUT as Distributed RAM |    <0.001 |        8 |     19000 |            0.04 |
 |   Others                 |     0.000 |      109 |       --- |             --- |
-| Signals                  |     0.006 |     4907 |       --- |             --- |
+| Signals                  |     0.007 |     4931 |       --- |             --- |
 | Block RAM                |     0.005 |      7.5 |       135 |            5.56 |
 | MMCM                     |     0.122 |        1 |         6 |           16.67 |
 | I/O                      |     0.008 |       62 |       210 |           29.52 |
@@ -191,9 +191,9 @@ Table of Contents
 |   s1                     |    <0.001 |
 |   s2                     |    <0.001 |
 |   srx                    |    <0.001 |
-|   statemachine           |     0.002 |
+|   statemachine           |     0.001 |
 |   stx                    |    <0.001 |
-|   xvga1                  |     0.002 |
+|   xvga1                  |     0.003 |
 +--------------------------+-----------+
 
 
