@@ -35,7 +35,7 @@ module serial_tx
     STOP_BIT = 2'd3;
     
     reg [CTR_SIZE-1:0] ctr_d, ctr_q;
-    reg [13:0] bit_ctr_d, bit_ctr_q;
+    reg [23:0] bit_ctr_d, bit_ctr_q;
     reg [PKT_LENGTH-1:0] data_d, data_q;
     reg [STATE_SIZE-1:0] state_d, state_q = IDLE;
     reg tx_d, tx_q;
@@ -58,7 +58,7 @@ module serial_tx
       IDLE: begin
           busy_d = 1'b0;
           tx_d = 1'b0;
-          bit_ctr_d = 14'b0;
+          bit_ctr_d = 24'b0;
           ctr_d = 1'b0;
           done_d = 1'b0;
           if (new_data) begin
