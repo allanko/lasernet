@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1484640542">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1484646780">
+  <File Type="PWROPT-DRC" Name="labkit_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="labkit_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="labkit_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="labkit_power_routed.rpx"/>
   <File Type="PA-TCL" Name="labkit.tcl"/>
-  <File Type="INIT-TIMING" Name="labkit_timing_summary_init.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="labkit_methodology_drc_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="labkit_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="labkit.hwdef"/>
   <File Type="RDI-RDI" Name="labkit.vdi"/>
   <File Type="OPT-DCP" Name="labkit_opt.dcp"/>
-  <File Type="OPT-HWDEF" Name="labkit.hwdef"/>
   <File Type="OPT-DRC" Name="labkit_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="labkit_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="labkit_pwropt.dcp"/>
@@ -31,14 +31,14 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="labkit_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="labkit_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="labkit_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="labkit_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="labkit.bin"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="labkit_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="labkit_drc_routed.rpx"/>
   <File Type="BG-DRC" Name="labkit.drc"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="labkit_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="labkit_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MSK" Name="labkit.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="labkit_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="labkit_methodology_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="labkit.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="labkit_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="labkit_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="labkit_power_summary_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="labkit_route_status.rpt"/>
