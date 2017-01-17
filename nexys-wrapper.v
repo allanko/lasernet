@@ -176,9 +176,11 @@ receivepacket packetrcv(.clk(clocksys), .reset(reset),
 wire laser_out;
 wire busy;
 
-assign JA[0] = laser_out;
-assign LED[12] = busy;
-assign LED[13] = laser_out;
+assign JA[0] = laser_out;             
+
+assign LED[12] = busy;                // LED constant when laser transmitting
+assign LED[13] = laser_out;           // LED flashes when laser transmitting
+assign LED[14] = JA[1];               // LED flashes when laser receiving
 
 serial_tx stx(.clk(clocksys),
         .rst(reset),

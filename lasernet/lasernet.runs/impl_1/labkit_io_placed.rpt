@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Tue Jan 17 00:08:29 2017
+| Date         : Tue Jan 17 01:10:05 2017
 | Host         : allanko running 64-bit major release  (build 9200)
 | Command      : report_io -file labkit_io_placed.rpt
 | Design       : labkit
@@ -350,7 +350,7 @@ Table of Contents
 | V9         |              | High Range | IO_L21N_T3_DQS_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | V10        | SW[15]       | High Range | IO_L21P_T3_DQS_14            | INPUT       | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | V11        | LED[15]      | High Range | IO_L21N_T3_DQS_A06_D22_14    | TRISTATE    | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
-| V12        | LED[14]      | High Range | IO_L20N_T3_A07_D23_14        | TRISTATE    | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| V12        | LED[14]      | High Range | IO_L20N_T3_A07_D23_14        | OUTPUT      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | V13        |              |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | V14        | LED[13]      | High Range | IO_L22N_T3_A04_D20_14        | OUTPUT      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | V15        | LED[12]      | High Range | IO_L16P_T2_CSI_B_14          | OUTPUT      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |

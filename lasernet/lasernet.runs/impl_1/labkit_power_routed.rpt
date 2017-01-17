@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date             : Tue Jan 17 00:09:47 2017
+| Date             : Tue Jan 17 01:11:26 2017
 | Host             : allanko running 64-bit major release  (build 9200)
 | Command          : report_power -file labkit_power_routed.rpt -pb labkit_power_summary_routed.pb -rpx labkit_power_routed.rpx
 | Design           : labkit
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.247 |
-| Dynamic (W)              | 0.149 |
+| Total On-Chip Power (W)  | 0.248 |
+| Dynamic (W)              | 0.150 |
 | Device Static (W)        | 0.098 |
 | Effective TJA (C/W)      | 4.6   |
 | Max Ambient (C)          | 98.9  |
@@ -49,20 +49,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.005 |        8 |       --- |             --- |
+| Clocks                   |     0.004 |        8 |       --- |             --- |
 | Slice Logic              |     0.004 |     5561 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     2142 |     63400 |            3.38 |
+|   LUT as Logic           |     0.004 |     2138 |     63400 |            3.37 |
 |   CARRY4                 |    <0.001 |      418 |     15850 |            2.64 |
 |   Register               |    <0.001 |     2416 |    126800 |            1.91 |
 |   F7/F8 Muxes            |    <0.001 |       65 |     63400 |            0.10 |
 |   LUT as Distributed RAM |    <0.001 |        8 |     19000 |            0.04 |
 |   Others                 |     0.000 |      109 |       --- |             --- |
-| Signals                  |     0.007 |     4907 |       --- |             --- |
+| Signals                  |     0.007 |     4909 |       --- |             --- |
 | Block RAM                |     0.005 |      7.5 |       135 |            5.56 |
 | MMCM                     |     0.122 |        1 |         6 |           16.67 |
-| I/O                      |     0.007 |       62 |       210 |           29.52 |
+| I/O                      |     0.008 |       62 |       210 |           29.52 |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.247 |          |           |                 |
+| Total                    |     0.248 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -146,7 +146,7 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| labkit                   |     0.149 |
+| labkit                   |     0.150 |
 |   clock65                |     0.122 |
 |     inst                 |     0.122 |
 |   db1                    |    <0.001 |
@@ -191,7 +191,7 @@ Table of Contents
 |   s1                     |    <0.001 |
 |   s2                     |    <0.001 |
 |   srx                    |    <0.001 |
-|   statemachine           |     0.002 |
+|   statemachine           |     0.001 |
 |   stx                    |    <0.001 |
 |   xvga1                  |     0.003 |
 +--------------------------+-----------+

@@ -77,11 +77,11 @@ module receivepacket(
 
     // REGISTERS FOR INCOMING MESSAGE
 
-    reg [16*8 - 1 : 0] messagepart1 = "[     blank    ]"; 
-    reg [16*8 - 1 : 0] messagepart2 = "[     blank    ]"; 
-    reg [16*8 - 1 : 0] messagepart3 = "[     blank    ]"; 
-    reg [16*8 - 1 : 0] messagepart4 = "[     blank    ]"; 
-    reg [16*8 - 1 : 0] messagepart5 = "[     blank    ]"; 
+    reg [16*8 - 1 : 0] messagepart1 = "[     blank 1  ]"; 
+    reg [16*8 - 1 : 0] messagepart2 = "[     blank 2  ]"; 
+    reg [16*8 - 1 : 0] messagepart3 = "[     blank 3  ]"; 
+    reg [16*8 - 1 : 0] messagepart4 = "[     blank 4  ]"; 
+    reg [16*8 - 1 : 0] messagepart5 = "[     blank 5  ]"; 
 
 
     assign message = {messagepart5, messagepart4, messagepart3, messagepart2, messagepart1};
@@ -143,11 +143,11 @@ module receivepacket(
 
     		RESET : begin
 
-				messagepart1 <= "[     blank    ]";
-				messagepart2 <= "[     blank    ]";
-				messagepart3 <= "[     blank    ]";
-				messagepart4 <= "[     blank    ]";
-				messagepart5 <= "[     blank    ]";
+				messagepart1 <= "[     blank 1  ]";
+				messagepart2 <= "[     blank 2  ]";
+				messagepart3 <= "[     blank 3  ]";
+				messagepart4 <= "[     blank 4  ]";
+				messagepart5 <= "[     blank 5  ]";
 
 				seq <= 32'd0;
 				ack <= 32'd0;
