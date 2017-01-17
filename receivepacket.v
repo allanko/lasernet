@@ -84,7 +84,7 @@ module receivepacket(
     reg [16*8 - 1 : 0] messagepart5 = "[     blank    ]"; 
 
 
-    assign message = {messagepart1, messagepart2, messagepart3, messagepart4, messagepart5};
+    assign message = {messagepart5, messagepart4, messagepart3, messagepart2, messagepart1};
 
     // STATE MACHINE FOR TRACKING PACKETS AND UPDATING OUTPUTS
 
