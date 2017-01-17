@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Tue Jan 17 01:08:39 2017
+| Date         : Tue Jan 17 02:11:26 2017
 | Host         : allanko running 64-bit major release  (build 9200)
 | Command      : report_utilization -file labkit_utilization_synth.rpt -pb labkit_utilization_synth.pb
 | Design       : labkit
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 401   |          Yes |         Set |            - |
-| 2006  |          Yes |       Reset |            - |
+| 389   |          Yes |         Set |            - |
+| 2018  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,12 +149,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 2006 |        Flop & Latch |
+| FDRE     | 2018 |        Flop & Latch |
 | LUT6     |  842 |                 LUT |
 | LUT1     |  736 |                 LUT |
 | LUT2     |  494 |                 LUT |
 | CARRY4   |  418 |          CarryLogic |
-| FDSE     |  401 |        Flop & Latch |
+| FDSE     |  389 |        Flop & Latch |
 | LUT4     |  328 |                 LUT |
 | LUT5     |  305 |                 LUT |
 | LUT3     |  269 |                 LUT |
