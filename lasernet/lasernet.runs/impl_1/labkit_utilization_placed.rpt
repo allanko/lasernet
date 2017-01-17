@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Mon Jan 16 23:43:28 2017
+| Date         : Tue Jan 17 00:08:29 2017
 | Host         : allanko running 64-bit major release  (build 9200)
 | Command      : report_utilization -file labkit_utilization_placed.rpt -pb labkit_utilization_placed.pb
 | Design       : labkit
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs                 | 2151 |     0 |     63400 |  3.39 |
-|   LUT as Logic             | 2143 |     0 |     63400 |  3.38 |
+| Slice LUTs                 | 2150 |     0 |     63400 |  3.39 |
+|   LUT as Logic             | 2142 |     0 |     63400 |  3.38 |
 |   LUT as Memory            |    8 |     0 |     19000 |  0.04 |
 |     LUT as Distributed RAM |    8 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
@@ -69,12 +69,12 @@ Table of Contents
 +-------------------------------------------+------+-------+-----------+-------+
 |                 Site Type                 | Used | Fixed | Available | Util% |
 +-------------------------------------------+------+-------+-----------+-------+
-| Slice                                     | 1046 |     0 |     15850 |  6.60 |
-|   SLICEL                                  |  680 |     0 |           |       |
-|   SLICEM                                  |  366 |     0 |           |       |
-| LUT as Logic                              | 2143 |     0 |     63400 |  3.38 |
+| Slice                                     | 1006 |     0 |     15850 |  6.35 |
+|   SLICEL                                  |  667 |     0 |           |       |
+|   SLICEM                                  |  339 |     0 |           |       |
+| LUT as Logic                              | 2142 |     0 |     63400 |  3.38 |
 |   using O5 output only                    |    0 |       |           |       |
-|   using O6 output only                    | 1748 |       |           |       |
+|   using O6 output only                    | 1747 |       |           |       |
 |   using O5 and O6                         |  395 |       |           |       |
 | LUT as Memory                             |    8 |     0 |     19000 |  0.04 |
 |   LUT as Distributed RAM                  |    8 |     0 |           |       |
@@ -82,10 +82,10 @@ Table of Contents
 |     using O6 output only                  |    0 |       |           |       |
 |     using O5 and O6                       |    8 |       |           |       |
 |   LUT as Shift Register                   |    0 |     0 |           |       |
-| LUT Flip Flop Pairs                       |  184 |     0 |     63400 |  0.29 |
+| LUT Flip Flop Pairs                       |  173 |     0 |     63400 |  0.27 |
 |   fully used LUT-FF pairs                 |   39 |       |           |       |
-|   LUT-FF pairs with one unused LUT output |  131 |       |           |       |
-|   LUT-FF pairs with one unused Flip Flop  |  131 |       |           |       |
+|   LUT-FF pairs with one unused LUT output |  120 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  |  122 |       |           |       |
 | Unique Control Sets                       |   57 |       |           |       |
 +-------------------------------------------+------+-------+-----------+-------+
 * Note: Review the Control Sets Report for more information regarding control sets.
@@ -186,7 +186,7 @@ Table of Contents
 | FDSE       |  389 |        Flop & Latch |
 | LUT4       |  341 |                 LUT |
 | LUT5       |  305 |                 LUT |
-| LUT1       |  286 |                 LUT |
+| LUT1       |  285 |                 LUT |
 | LUT3       |  270 |                 LUT |
 | MUXF7      |   52 |               MuxFx |
 | OBUF       |   36 |                  IO |

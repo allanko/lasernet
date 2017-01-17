@@ -192,7 +192,7 @@ defparam stx.PKT_LENGTH = 32*9;
 
 serial_rx srx(.clk(clocksys),
         .rst(reset),
-        .rx(~JA[1]),                      // incoming photodiode signal on JA[1]
+        .rx(JA[1]),                      // incoming photodiode signal on JA[1]
         .data(incomingpacket),            // incoming data packet
         .new_data(readyfromlaserinput));  // high for one cycle when new packet available
 defparam srx.CLK_PER_BIT = 13540;
