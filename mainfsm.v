@@ -212,6 +212,7 @@ module mainfsm(
     		SEQout = ISN + SN;
 
     		nextstate = packetsent ? S_FIN : 
+                        finwaitcounter == FINWAITMAX ? S_PASSIVE_OPEN : 
     					S_FIN_WAIT;
     	end
 

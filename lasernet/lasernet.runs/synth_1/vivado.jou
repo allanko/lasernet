@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Jan 17 02:55:19 2017
-# Process ID: 9840
+# Start of session at: Tue Jan 17 03:07:14 2017
+# Process ID: 12856
 # Current directory: C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1
 # Command line: vivado.exe -log labkit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source labkit.tcl
 # Log file: C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.runs/synth_1/labkit.vds
