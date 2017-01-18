@@ -49,7 +49,6 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param xicom.use_bs_reader 1
   open_checkpoint labkit_routed.dcp
   set_property webtalk.parent_dir {C:/Users/Allan/Documents/MIT/FALL 2016/6.111/final project/lasernet/lasernet.cache/wt} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]

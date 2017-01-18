@@ -175,12 +175,10 @@ receivepacket packetrcv(.clk(clocksys), .reset(reset),
 
 wire laser_out;
 wire busy;
+wire photodiode_in;
 
-assign JA[0] = laser_out;             
-
-assign LED[12] = busy;                // LED constant when laser transmitting
-assign LED[13] = laser_out;           // LED flashes when laser transmitting
-assign LED[14] = JA[1];               // LED flashes when laser receiving
+assign JA[0] = laser_out; 
+assign photodiode_in = JA[1];            
 
 serial_tx stx(.clk(clocksys),
         .rst(reset),
@@ -194,7 +192,7 @@ defparam stx.PKT_LENGTH = 32*9;
 
 serial_rx srx(.clk(clocksys),
         .rst(reset),
-        .rx(JA[1]),                      // incoming photodiode signal on JA[1]
+        .rx(photodiode_in),               // incoming photodiode signal on JA[1]
         .data(incomingpacket),            // incoming data packet
         .new_data(readyfromlaserinput));  // high for one cycle when new packet available
 defparam srx.CLK_PER_BIT = 54166; //1350 for 4800 baud rate, 54166 for 1200 baud rate
@@ -203,14 +201,18 @@ defparam srx.PKT_LENGTH = 32*9;
 
 ////////////////////////// workspace
 
-// display some important numbers to seven-segment display
+// display some important numbers to seven-segment display and LEDs
 assign to_display = {incomingACK[3:0], incomingSEQ[3:0], outgoingACK[3:0], outgoingSEQ[3:0], 12'h000, state};
+
 assign LED[2:0] = {outgoingflags[4], outgoingflags[1], outgoingflags[0]};
+assign LED[5:3] = {incomingflags[4], incomingflags[1], incomingflags[0]};
 
+assign LED[12] = busy;                // LED constant when laser transmitting
+assign LED[13] = laser_out;           // LED flashes when laser transmitting
+assign LED[14] = photodiode_in;       // LED flashes when laser receiving
 
-// temp statements here - remove this section
+//// these lines are for debugging the state machine and simulating incoming packets
 // assign packetsent = SW[14]; // simulate a packet being sent
-
 // assign incomingflags = {4'b0000, SW[2], 2'b00, SW[1], SW[0]}; // simulate incoming ack, syn, fin
 // assign incomingACK = {28'd0, SW[11:8]};
 // assign incomingSEQ = {28'd0, SW[7:4]};

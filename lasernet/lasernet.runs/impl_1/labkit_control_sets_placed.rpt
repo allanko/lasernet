@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Tue Jan 17 04:54:19 2017
+| Date         : Tue Jan 17 17:31:54 2017
 | Host         : allanko running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file labkit_control_sets_placed.rpt
 | Design       : labkit
@@ -23,7 +23,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    58 |
-| Unused register locations in slices containing registers |   129 |
+| Unused register locations in slices containing registers |   126 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,12 +33,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              72 |           42 |
+| No           | No                    | No                     |              72 |           37 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              51 |           29 |
-| Yes          | No                    | No                     |              98 |           35 |
+| No           | Yes                   | No                     |              51 |           27 |
+| Yes          | No                    | No                     |              98 |           29 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |            2250 |          606 |
+| Yes          | Yes                   | No                     |            2253 |          637 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -56,56 +56,56 @@ Table of Contents
 |  clock65/inst/clk_out_65mhz |                                               | display/p_0_in[2]                       |                1 |              2 |
 |  clock65/inst/clk_out_65mhz |                                               | display/p_0_in[1]                       |                2 |              4 |
 |  clock65/inst/clk_out_65mhz | kbdexport1/kbd/myps2/count[3]_i_1_n_0         | s1/reset                                |                1 |              4 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[63]                        | s1/reset                                |                2 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[71]                        | s1/reset                                |                2 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[63]                        | s1/reset                                |                4 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[71]                        | s1/reset                                |                4 |              7 |
 |  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[111]                       | s1/reset                                |                4 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[103]                       | s1/reset                                |                1 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[95]                        | s1/reset                                |                2 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[87]                        | s1/reset                                |                2 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[79]                        | s1/reset                                |                2 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[119]                       | s1/reset                                |                3 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[103]                       | s1/reset                                |                3 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[95]                        | s1/reset                                |                3 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[87]                        | s1/reset                                |                3 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[79]                        | s1/reset                                |                3 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[119]                       | s1/reset                                |                4 |              7 |
 |  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[127]                       | s1/reset                                |                3 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[7]                         | s1/reset                                |                2 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[15]                        | s1/reset                                |                3 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[23]                        | s1/reset                                |                2 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[7]                         | s1/reset                                |                3 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[15]                        | s1/reset                                |                4 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[23]                        | s1/reset                                |                3 |              7 |
 |  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[31]                        | s1/reset                                |                3 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[39]                        | s1/reset                                |                6 |              7 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[47]                        | s1/reset                                |                4 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[39]                        | s1/reset                                |                2 |              7 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[47]                        | s1/reset                                |                3 |              7 |
 |  clock65/inst/clk_out_65mhz | kbdexport1/p_0_out[55]                        | s1/reset                                |                3 |              7 |
-|  clock65/inst/clk_out_65mhz | xvga1/hreset                                  | xvga1/vcount0                           |                7 |             10 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/kbd/myps2/shift                    |                                         |                3 |             10 |
-|  clock65/inst/clk_out_65mhz |                                               | xvga1/hreset                            |               11 |             11 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/kbd/E[0]                           | s1/reset                                |                2 |             11 |
+|  clock65/inst/clk_out_65mhz | xvga1/hreset                                  | xvga1/vcount0                           |                6 |             10 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/kbd/myps2/shift                    |                                         |                2 |             10 |
+|  clock65/inst/clk_out_65mhz |                                               | xvga1/hreset                            |                8 |             11 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/kbd/E[0]                           | s1/reset                                |                3 |             11 |
 |  clock65/inst/clk_out_65mhz | kbdexport1/kbd/myps2/fifo_reg_0_7_0_5_i_1_n_0 |                                         |                2 |             16 |
 |  clock65/inst/clk_out_65mhz | srx/ctr_q[15]_i_1_n_0                         | s1/reset                                |                4 |             16 |
 |  clock65/inst/clk_out_65mhz | db2/count                                     | s1/new_reg_0                            |                5 |             19 |
 |  clock65/inst/clk_out_65mhz | db1/count                                     | s1/new_reg                              |                5 |             19 |
-|  clock65/inst/clk_out_65mhz | srx/bit_ctr_q[23]_i_1__0_n_0                  | s1/reset                                |                4 |             24 |
+|  clock65/inst/clk_out_65mhz | srx/bit_ctr_q[23]_i_1__0_n_0                  | s1/reset                                |                6 |             24 |
 |  clock65/inst/clk_out_65mhz | stx/bit_ctr_q[23]_i_1_n_0                     | s1/reset                                |                5 |             24 |
 |  clock65/inst/clk_out_65mhz | statemachine/finwaitcounter[29]_i_2_n_0       | statemachine/finwaitcounter[29]_i_1_n_0 |                9 |             30 |
-|  clock65/inst/clk_out_65mhz | packetgen/state                               | statemachine/packet_reg[192]_0          |                8 |             32 |
-|  clock65/inst/clk_out_65mhz | packetrcv/state_reg_n_0_[1]                   | packetrcv/seq[31]_i_1_n_0               |                9 |             32 |
-|  clock65/inst/clk_out_65mhz | s1/highestSNreceived_reg[31]                  | packetrcv/highestSNreceived[31]_i_1_n_0 |               12 |             32 |
-|  clock65/inst/clk_out_65mhz |                                               | s1/reset                                |               13 |             32 |
+|  clock65/inst/clk_out_65mhz | packetgen/state                               | statemachine/packet_reg[192]_0          |               10 |             32 |
+|  clock65/inst/clk_out_65mhz | packetrcv/state_reg_n_0_[1]                   | packetrcv/seq[31]_i_1_n_0               |               16 |             32 |
+|  clock65/inst/clk_out_65mhz | s1/highestSNreceived_reg[31]                  | packetrcv/highestSNreceived[31]_i_1_n_0 |               10 |             32 |
+|  clock65/inst/clk_out_65mhz |                                               | s1/reset                                |               14 |             32 |
 |  clock65/inst/clk_out_65mhz | statemachine/nextACK                          | statemachine/nextACK[31]_i_1_n_0        |                9 |             32 |
-|  clock65/inst/clk_out_65mhz | statemachine/lastACK[31]_i_2_n_0              | statemachine/lastACK[31]_i_1_n_0        |                9 |             32 |
-|  clock65/inst/clk_out_65mhz | statemachine/SN[31]_i_1_n_0                   |                                         |               12 |             34 |
-|  clock65/inst/clk_out_65mhz | packetrcv/ack[31]_i_1_n_0                     | packetrcv/seq[31]_i_1_n_0               |               10 |             35 |
-|  clock65/inst/clk_out_65mhz | packetgen/state                               |                                         |               17 |             51 |
-|  clock65/inst/clk_out_65mhz |                                               |                                         |               42 |             72 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/messageoutarray0[75]_i_2_n_0       | kbdexport1/messageoutarray0[75]_i_1_n_0 |               33 |            110 |
+|  clock65/inst/clk_out_65mhz | statemachine/lastACK[31]_i_2_n_0              | statemachine/lastACK[31]_i_1_n_0        |                7 |             32 |
+|  clock65/inst/clk_out_65mhz | statemachine/SN[31]_i_1_n_0                   |                                         |               11 |             34 |
+|  clock65/inst/clk_out_65mhz | packetrcv/ack[31]_i_1_n_0                     | packetrcv/seq[31]_i_1_n_0               |               12 |             38 |
+|  clock65/inst/clk_out_65mhz | packetgen/state                               |                                         |               13 |             51 |
+|  clock65/inst/clk_out_65mhz |                                               |                                         |               37 |             72 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/messageoutarray0[75]_i_2_n_0       | kbdexport1/messageoutarray0[75]_i_1_n_0 |               32 |            110 |
 |  clock65/inst/clk_out_65mhz | kbdexport1/messageoutarray4[75]_i_2_n_0       | kbdexport1/messageoutarray4[75]_i_1_n_0 |               32 |            110 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/messageoutarray3[75]_i_2_n_0       | kbdexport1/messageoutarray3[75]_i_1_n_0 |               28 |            110 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/messageoutarray2[75]_i_2_n_0       | kbdexport1/messageoutarray2[75]_i_1_n_0 |               30 |            110 |
-|  clock65/inst/clk_out_65mhz | kbdexport1/messageoutarray1[75]_i_2_n_0       | kbdexport1/messageoutarray1[75]_i_1_n_0 |               34 |            110 |
-|  clock65/inst/clk_out_65mhz | packetgen/state                               | packetgen/packet[126]_i_1_n_0           |               29 |            112 |
-|  clock65/inst/clk_out_65mhz | packetrcv/messagepart50                       | packetrcv/messagepart5[127]_i_1_n_0     |               32 |            128 |
-|  clock65/inst/clk_out_65mhz | packetrcv/messagepart40                       | packetrcv/messagepart4[127]_i_1_n_0     |               31 |            128 |
-|  clock65/inst/clk_out_65mhz | packetrcv/messagepart30                       | packetrcv/messagepart3[127]_i_1_n_0     |               30 |            128 |
-|  clock65/inst/clk_out_65mhz | packetrcv/messagepart10                       | packetrcv/messagepart1[127]_i_1_n_0     |               31 |            128 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/messageoutarray3[75]_i_2_n_0       | kbdexport1/messageoutarray3[75]_i_1_n_0 |               30 |            110 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/messageoutarray2[75]_i_2_n_0       | kbdexport1/messageoutarray2[75]_i_1_n_0 |               28 |            110 |
+|  clock65/inst/clk_out_65mhz | kbdexport1/messageoutarray1[75]_i_2_n_0       | kbdexport1/messageoutarray1[75]_i_1_n_0 |               30 |            110 |
+|  clock65/inst/clk_out_65mhz | packetgen/state                               | packetgen/packet[126]_i_1_n_0           |               31 |            112 |
+|  clock65/inst/clk_out_65mhz | packetrcv/messagepart50                       | packetrcv/messagepart5[127]_i_1_n_0     |               29 |            128 |
+|  clock65/inst/clk_out_65mhz | packetrcv/messagepart40                       | packetrcv/messagepart4[127]_i_1_n_0     |               33 |            128 |
+|  clock65/inst/clk_out_65mhz | packetrcv/messagepart30                       | packetrcv/messagepart3[127]_i_1_n_0     |               33 |            128 |
+|  clock65/inst/clk_out_65mhz | packetrcv/messagepart10                       | packetrcv/messagepart1[127]_i_1_n_0     |               33 |            128 |
 |  clock65/inst/clk_out_65mhz | packetrcv/messagepart20                       | packetrcv/messagepart2[127]_i_1_n_0     |               32 |            128 |
-|  clock65/inst/clk_out_65mhz | stx/data_q[255]_i_1_n_0                       | s1/reset                                |               58 |            196 |
-|  clock65/inst/clk_out_65mhz | srx/data_q[287]_i_1_n_0                       | s1/reset                                |               63 |            288 |
+|  clock65/inst/clk_out_65mhz | stx/data_q[255]_i_1_n_0                       | s1/reset                                |               64 |            196 |
+|  clock65/inst/clk_out_65mhz | srx/data_q[287]_i_1_n_0                       | s1/reset                                |               70 |            288 |
 +-----------------------------+-----------------------------------------------+-----------------------------------------+------------------+----------------+
 
 
