@@ -11,3 +11,5 @@ LASERNET is a free-space optical (FSO) communication system implemented with FPG
 ## Block diagram
 ![alt tag](documentation/block-diagram.png)
 
+## State transition diagram
+![alt tag](documentation/state-transition-diagram.png)
