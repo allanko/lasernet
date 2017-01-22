@@ -2,7 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // 
-// Create Date: 10/1/2015 V1.0
+// Create Date: 
 // Design Name: 
 // Module Name: labkit
 // Project Name: 
@@ -37,21 +37,6 @@ module labkit(
    output[7:0] SEG,  // segments A-G (0-6), DP (7)
    output[7:0] AN    // Display 0-7
    );
-
-////////////////////////// SAMPLE CODE - DELETE THIS ///////////////////////////
-//
-//  remove these lines and insert your lab here
-
-//    assign LED = SW;     
-//    assign JA[7:0] = 8'b0;
-//    assign LED16_R = BTNL;                  // left button -> red led
-//    assign LED16_G = BTNC;                  // center button -> green led
-//    assign LED16_B = BTNR;                  // right button -> blue led
-//    assign LED17_R = BTNL;
-//    assign LED17_G = BTNC;
-//    assign LED17_B = BTNR; 
-
-
 
 /////////////////////////// SETUP //////////////////////////////////////////////////
 

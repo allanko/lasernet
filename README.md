@@ -1,5 +1,7 @@
-## Lasernet
+## LASERNET
 
-Final project for MIT 6.111 Introductory Digital Systems Laboratory, fall 2016. See also the [course website](http://web.mit.edu/6.111/www/f2016/).
+Final project for MIT [6.111 Introductory Digital Systems Laboratory](http://web.mit.edu/6.111/www/f2016/), fall 2016.
+
+Video demo of LASERNET in action [here](https://www.youtube.com/watch?v=AM9uxJAMKng&).
 
 by allanko [at] mit.edu and keam [at] mit.edu
