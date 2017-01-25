@@ -26,7 +26,7 @@ module receivepacket(
 	input clk,
 	input reset,
 	input ready,
-	input ISN,
+	input [31:0] ISN,
 	input [32*9 - 1 : 0] packet,
 
 	output reg [31:0] seq,
